@@ -262,7 +262,7 @@ input, textarea, select { font-family: inherit; outline: none; }
    ============================================================ */
 #search-bar {
   background: var(--surface); border-bottom: 1px solid var(--border);
-  padding: 16px 0; position: sticky; top: 5px; z-index: 100;
+  padding: 16px 0; position: fixed; top: 68px; z-index: 100; width: 100%;
 }
 .search-inner {
   display: flex; align-items: center; gap: 12px;
@@ -1002,7 +1002,7 @@ footer { background: var(--surface); border-top: 1px solid var(--border); paddin
 </div>
 
 <!-- ===== CATEGORIES ===== -->
-<section id="categories">
+<!-- <section id="categories">
   <div class="container" style="padding-top:72px;padding-bottom:72px;">
     <div class="section-header center">
       <span class="section-eyebrow">Browse By Category</span>
@@ -1034,7 +1034,7 @@ footer { background: var(--surface); border-top: 1px solid var(--border); paddin
 </section>
 
 <!-- ===== PRODUCTS ===== -->
-<section id="products">
+<!-- <section id="products">
   <div class="container" style="padding-top:64px;padding-bottom:80px;">
     <div class="products-header">
       <div class="products-title">All Products <span id="result-count" style="color:var(--text-dim);font-size:16px;font-weight:400;font-family:var(--font-body);"></span></div>
