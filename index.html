@@ -247,6 +247,7 @@ input, textarea, select { font-family: inherit; outline: none; }
 .marquee-strip {
   background: var(--gold); padding: 12px 0; overflow: hidden;
   display: flex; white-space: nowrap;
+  position: fixed; top: 68px; width: 100%; z-index: 99;
 }
 .marquee-inner {
   display: inline-flex; gap: 0;
@@ -262,7 +263,7 @@ input, textarea, select { font-family: inherit; outline: none; }
    ============================================================ */
 #search-bar {
   background: var(--surface); border-bottom: 1px solid var(--border);
-  padding: 16px 0; position: fixed; top: 68px; z-index: 100; width: 100%;
+  padding: 16px 0; position: fixed; top: 112px; z-index: 100; width: 100%;
 }
 .search-inner {
   display: flex; align-items: center; gap: 12px;
@@ -327,7 +328,7 @@ input, textarea, select { font-family: inherit; outline: none; }
 /* ============================================================
    PRODUCTS GRID
    ============================================================ */
-#products { padding: 64px 0 80px; }
+#products { padding: 64px 0 80px; margin-top: 120px; }
 .products-header {
   display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; gap: 16px; flex-wrap: wrap;
 }
@@ -989,7 +990,7 @@ footer { background: var(--surface); border-top: 1px solid var(--border); paddin
       <span class="search-icon">🔍</span>
       <input type="text" id="search-input" placeholder="Search phones, laptops, gaming devices..." oninput="filterProducts()">
     </div>
-    <div class="filter-pills">
+   <!--  <div class="filter-pills">
       <button class="pill active" data-cat="all" onclick="setFilter('all', this)">All</button>
       <button class="pill" data-cat="phone" onclick="setFilter('phone', this)">📱 Phones</button>
       <button class="pill" data-cat="laptop" onclick="setFilter('laptop', this)">💻 Laptops</button>
@@ -999,7 +1000,7 @@ footer { background: var(--surface); border-top: 1px solid var(--border); paddin
       <button class="pill" data-cond="used" onclick="setCondFilter('used', this)">🟡 UK Used</button>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- ===== CATEGORIES ===== -->
 <!-- <section id="categories">
