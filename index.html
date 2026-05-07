@@ -260,7 +260,13 @@ input, textarea, select { font-family: inherit; outline: none; }
 }
 .marquee-inner {
   display: inline-flex; gap: 0;
+  animation: marquee-scroll 25s linear infinite;
 }
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+   }
 .marquee-item {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 0 20px; font-size: 10px; font-weight: 700; color: #0a0a0a;
