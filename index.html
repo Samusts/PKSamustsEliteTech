@@ -2245,7 +2245,7 @@ async function sendAIMsg() {
   try {
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-api-key': 'YOUR_ANTHROPIC_API_KEY', 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
+      headers: { 'Content-Type': 'application/json', 'x-api-key': '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', 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
       body: JSON.stringify({ model: 'claude-sonnet-4-20250514', max_tokens: 1000, system: systemPrompt, messages: [{ role: 'user', content: msg }] })
     });
     const data = await res.json();
@@ -2570,7 +2570,7 @@ async function aiGenerateSpecs() {
   try {
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-api-key': 'YOUR_ANTHROPIC_API_KEY', 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
+      headers: { 'Content-Type': 'application/json', 'x-api-key': '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', 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514', max_tokens: 1000,
         messages: [{ role: 'user', content: `Generate a concise product specs summary for "${name}" in 1 line (max 120 chars), comma-separated key specs only. No intro text, just the specs. Example: "6.7" OLED, A17 Pro, 48MP, 256GB, USB-C"` }]
@@ -2857,7 +2857,7 @@ async function submitReview() {
   try {
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-api-key': 'YOUR_ANTHROPIC_API_KEY', 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
+      headers: { 'Content-Type': 'application/json', 'x-api-key': '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', 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514',
         max_tokens: 50,
