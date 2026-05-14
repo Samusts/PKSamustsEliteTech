@@ -1,0 +1,59 @@
+{
+  "version": "2.0.0",
+  "lastUpdated": "",
+  "settings": {
+    "storeName": "EliteTech",
+    "tagline": "Maiduguri's #1 Tech Store",
+    "whatsapp": "2349036006553",
+    "currency": "₦",
+    "location": "Maiduguri, Borno State, Nigeria",
+    "email": "",
+    "announcement": "🔥 Same-day delivery in Maiduguri | ✅ 100% Genuine Devices | 🛡️ Warranty on all products",
+    "maintenanceMode": false
+  },
+  "categories": [
+    { "id": "phones", "name": "Smartphones", "icon": "📱", "color": "#3182ce", "visible": true, "order": 1 },
+    { "id": "laptops", "name": "Laptops", "icon": "💻", "color": "#38a169", "visible": true, "order": 2 },
+    { "id": "gaming", "name": "Gaming", "icon": "🎮", "color": "#805ad5", "visible": true, "order": 3 },
+    { "id": "tablets", "name": "Tablets", "icon": "📟", "color": "#dd6b20", "visible": true, "order": 4 },
+    { "id": "audio", "name": "Audio", "icon": "🎧", "color": "#e53e3e", "visible": true, "order": 5 },
+    { "id": "accessories", "name": "Accessories", "icon": "🔌", "color": "#d69e2e", "visible": true, "order": 6 },
+    { "id": "smartwatch", "name": "Smartwatches", "icon": "⌚", "color": "#319795", "visible": true, "order": 7 },
+    { "id": "cameras", "name": "Cameras", "icon": "📷", "color": "#744210", "visible": true, "order": 8 }
+  ],
+  "products": [],
+  "services": [
+    {
+      "id": "s1", "active": true, "featured": true,
+      "name": "CCTV Installation", "category": "security", "icon": "📷",
+      "description": "Professional indoor & outdoor CCTV installation with DVR/NVR setup and remote viewing.",
+      "price": "Contact for quote", "duration": "1–2 days", "coverage": "Maiduguri & surroundings",
+      "whatsappMsg": "Hi EliteTech, I need CCTV Installation service.", "images": []
+    },
+    {
+      "id": "s2", "active": true, "featured": true,
+      "name": "Satellite Dish Setup", "category": "satellite", "icon": "📡",
+      "description": "DSTV, GOTV, Startimes & free-to-air dish alignment, installation and decoder configuration.",
+      "price": "From ₦5,000", "duration": "Same day", "coverage": "Maiduguri",
+      "whatsappMsg": "Hi EliteTech, I need Satellite Dish installation.", "images": []
+    },
+    {
+      "id": "s3", "active": true, "featured": true,
+      "name": "Solar System Installation", "category": "solar", "icon": "☀️",
+      "description": "Complete solar panel, inverter and battery installation for homes and offices.",
+      "price": "Contact for quote", "duration": "2–5 days", "coverage": "Maiduguri & Borno State",
+      "whatsappMsg": "Hi EliteTech, I need Solar System installation.", "images": []
+    },
+    {
+      "id": "s4", "active": true, "featured": false,
+      "name": "Sound Engineering", "category": "sound", "icon": "🎵",
+      "description": "Professional sound setup for events, home studios and offices. Live sound management.",
+      "price": "Contact for quote", "duration": "Flexible", "coverage": "Maiduguri",
+      "whatsappMsg": "Hi EliteTech, I need Sound Engineering services.", "images": []
+    }
+  ],
+  "reviews": [],
+  "analytics": { "totalViews": 0, "topProducts": [] },
+  "notifications": [],
+  "aiKey": ""
+}
