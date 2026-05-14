@@ -2262,7 +2262,7 @@ function renderProducts() {
 /* ============================================================
    ANALYTICS — lightweight page & product tracking
    ============================================================ */
-const Analytics = {
+/* const Analytics = {
   data: JSON.parse(localStorage.getItem('et_analytics') || '{"views":{},"searches":[],"clicks":{},"sessions":0}'),
 
   save() { localStorage.setItem('et_analytics', JSON.stringify(this.data)); },
@@ -2301,7 +2301,7 @@ const Analytics = {
   }
 };
 
-Analytics.session();
+Analytics.session(); */
 
 function filterProducts() { renderProducts(); }
 
@@ -2725,7 +2725,7 @@ async function checkPassword() {
   if (pw !== ADMIN_PASSWORD) {
     SEC.fail();
     const left = SEC.maxAttempts - SEC.getA().n;
-    errEl.textContent = left<=0 ? '🔒 Locked 15 min.' : 'Wrong password. '+left+' attempt'+( left===1?'':\'s')+' left.';
+    errEl.textContent = left<=0 ? '🔒 Account locked for 15 minutes.' : 'Wrong password. '+left+(left===1?' attempt left':' attempts left')+'.';
     errEl.style.display='block';
     document.getElementById('auth-password').value=''; return;
   }
@@ -3205,12 +3205,12 @@ function loadReviews() {
 }
 
 // Init
-document.addEventListener('DOMContentLoaded', function() {
+/* document.addEventListener('DOMContentLoaded', function() {
   setStars(5);
   renderTestiPage(0, false);
   startTestiAutoplay();
   loadReviews();
-});
+}); */
 
 
 /* ============================================================
