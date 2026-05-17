@@ -1,0 +1,3899 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PKsamust's Elite Tech – Premium Phones, Laptops & Gaming Devices in Maiduguri, Nigeria. Your trusted tech plug.">
+<meta name="keywords" content="phones Maiduguri, laptops Nigeria, gaming devices, UK used phones, brand new phones Maiduguri">
+<meta name="theme-color" content="#0a0a0a">
+<title>PKsamust's Elite Tech | Premium Phones, Laptops & Gaming in Maiduguri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   THEME SYSTEM — LIGHT + DARK
+   ============================================================ */
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E2C06A;
+  --gold-dim: #8B6E2E;
+  --gold-glow: rgba(201,168,76,0.12);
+  --green: #16a34a;
+  --green-bg: rgba(22,163,74,0.1);
+  --amber: #d97706;
+  --amber-bg: rgba(217,119,6,0.1);
+  --red: #dc2626;
+  --red-bg: rgba(220,38,38,0.1);
+  --wa: #25D366;
+  --wa-bg: rgba(37,211,102,0.12);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-lg: 16px;
+  --font-display: 'Poppins', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+[data-theme="dark"] {
+  --bg: #0c0c0c;
+  --bg2: #111111;
+  --surface: #161616;
+  --surface2: #1c1c1c;
+  --surface3: #222222;
+  --border: rgba(255,255,255,0.08);
+  --border-gold: rgba(201,168,76,0.25);
+  --text: #f0ead6;
+  --text-muted: #888888;
+  --text-dim: #4a4a4a;
+  --shadow: 0 4px 24px rgba(0,0,0,0.5);
+  --nav-bg: rgba(12,12,12,0.95);
+  --nav-blur: blur(16px);
+  --modal-bg: rgba(0,0,0,0.85);
+}
+
+[data-theme="light"] {
+  --bg: #f8f8f7;
+  --bg2: #f2f1ef;
+  --surface: #ffffff;
+  --surface2: #f4f3f1;
+  --surface3: #eeede9;
+  --border: rgba(0,0,0,0.08);
+  --border-gold: rgba(201,168,76,0.35);
+  --text: #1a1a1a;
+  --text-muted: #6b6b6b;
+  --text-dim: #aaaaaa;
+  --shadow: 0 4px 24px rgba(0,0,0,0.08);
+  --nav-bg: rgba(248,248,247,0.95);
+  --nav-blur: blur(16px);
+  --modal-bg: rgba(0,0,0,0.6);
+}
+
+/* ============================================================
+   RESET + BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100%;
+  -webkit-overflow-scrolling: touch;
+  transition: background 0.3s, color 0.3s;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { cursor: pointer; border: none; outline: none; font-family: inherit; background: none; }
+input, textarea, select { font-family: inherit; outline: none; }
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* ============================================================
+   UTILITY
+   ============================================================ */
+.container { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+.section-pad { padding: 80px 0; }
+
+.gold { color: var(--gold); }
+
+.badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 3px 9px; border-radius: 20px; font-size: 10px; font-weight: 600;
+  letter-spacing: 0.4px; text-transform: uppercase;
+}
+.badge-new { background: var(--green-bg); color: var(--green); border: 1px solid rgba(22,163,74,0.2); }
+.badge-used { background: var(--amber-bg); color: var(--amber); border: 1px solid rgba(217,119,6,0.2); }
+.badge-sold { background: var(--red-bg); color: var(--red); border: 1px solid rgba(220,38,38,0.2); }
+.badge-hot { background: var(--gold-glow); color: var(--gold); border: 1px solid var(--border-gold); }
+
+/* ============================================================
+   NAV
+   ============================================================ */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: var(--nav-bg);
+}
+#nav.scrolled {
+  background: var(--nav-bg);
+  backdrop-filter: var(--nav-blur);
+  -webkit-backdrop-filter: var(--nav-blur);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 20px; max-width: 1240px; margin: 0 auto;
+}
+.nav-logo { display: flex; align-items: center; gap: 10px; }
+.logo-icon {
+  width: 28px; height: 28px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dim));
+  border-radius: 6px; display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; user-select: none;
+}
+.logo-text { font-family: var(--font-display); font-weight: 800; font-size: 14px; letter-spacing: -0.3px; }
+.logo-text span { color: var(--gold); }
+
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a {
+  font-size: 13.5px; font-weight: 500; color: var(--text-muted);
+  letter-spacing: 0.2px; transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--text); }
+
+.nav-actions { display: flex; align-items: center; gap: 10px; }
+
+.theme-btn {
+  width: 38px; height: 38px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 15px; transition: border-color 0.15s;
+}
+.theme-btn:hover { border-color: var(--gold); }
+
+.btn-wa-nav {
+  display: flex; align-items: center; gap: 7px;
+  background: var(--wa); color: #fff; padding: 9px 16px; border-radius: 50px;
+  font-size: 13px; font-weight: 600;
+}
+
+.hamburger { display: none; flex-direction: column; gap: 5px; padding: 8px; }
+.hamburger span { width: 20px; height: 2px; background: var(--text); border-radius: 2px; display: block; transition: all 0.25s; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile Menu */
+#mobile-menu {
+  display: none; position: fixed; inset: 0; z-index: 990;
+  background: var(--bg2); padding: 88px 24px 40px;
+  flex-direction: column; gap: 4px;
+}
+#mobile-menu.open { display: flex; }
+#mobile-menu a {
+  font-family: var(--font-display); font-size: 24px; font-weight: 700;
+  color: var(--text-muted); padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+#mobile-menu a:last-child { border-bottom: none; }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+#hero {
+  min-height: 100vh; display: flex; align-items: center;
+  padding-top: 80px; position: relative; overflow: hidden;
+}
+.hero-bg-pattern {
+  position: absolute; inset: 0; pointer-events: none; opacity: 0.4;
+  background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.hero-content { position: relative; z-index: 1; max-width: 720px; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--surface); border: 1px solid var(--border-gold);
+  padding: 7px 14px; border-radius: 50px; font-size: 11px; font-weight: 600;
+  letter-spacing: 1.2px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px;
+}
+.hero-eyebrow-dot {
+  width: 6px; height: 6px; background: var(--gold); border-radius: 50%;
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 6vw, 72px);
+  font-weight: 800; line-height: 1.05; letter-spacing: -2px; margin-bottom: 20px;
+}
+.hero-title .accent { color: var(--gold); }
+.hero-sub {
+  font-size: clamp(15px, 1.8vw, 17px); color: var(--text-muted); line-height: 1.7;
+  max-width: 500px; margin-bottom: 36px; font-weight: 400;
+}
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 52px; }
+
+.btn-primary {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--gold); color: #0a0a0a;
+  padding: 14px 28px; border-radius: 50px;
+  font-size: 14px; font-weight: 700; letter-spacing: 0.2px;
+  transition: background 0.15s, transform 0.15s;
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+.btn-wa {
+  display: flex; align-items: center; gap: 9px;
+  background: var(--wa-bg); border: 1px solid rgba(37,211,102,0.25);
+  color: var(--wa); padding: 14px 24px; border-radius: 50px;
+  font-size: 14px; font-weight: 600;
+  transition: background 0.15s;
+}
+.btn-wa:hover { background: rgba(37,211,102,0.2); }
+.btn-wa svg { width: 18px; height: 18px; fill: var(--wa); }
+
+.hero-stats { display: flex; gap: 36px; flex-wrap: wrap; }
+.stat-num { font-family: var(--font-display); font-size: 8px; font-weight: 800; color: var(--gold); }
+.stat-label { font-size: 11px; color: var(--text-muted); letter-spacing: 0.5px; margin-top: 2px; }
+
+/* ============================================================
+   MARQUEE STRIP
+   ============================================================ */
+.marquee-strip {
+  background: var(--gold); padding: 7px 0; overflow: hidden;
+  display: flex; white-space: nowrap;
+  position: fixed; top: 58px; width: 100%; z-index: 99;
+}
+.marquee-inner {
+  display: inline-flex; gap: 0;
+  animation: marquee-scroll 25s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+   }
+.marquee-item {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 0 20px; font-size: 10px; font-weight: 700; color: #0a0a0a;
+  letter-spacing: 0.5px; text-transform: uppercase; border-right: 1px solid rgba(0,0,0,0.15);
+}
+
+/* ============================================================
+   SEARCH BAR
+   ============================================================ */
+#search-bar {
+  background: var(--surface); border-bottom: 1px solid var(--border);
+  padding: 8px 0; position: fixed; top: 83px; z-index: 100; width: 100%;
+}
+.search-inner {
+  display: flex; align-items: center; gap: 12px;
+  max-width: 1240px; margin: 0 auto; padding: 0 20px;
+}
+.search-wrap { flex: 1; position: relative; }
+.search-wrap input {
+  width: 100%; background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 50px; padding: 8px 16px 8px 38px; color: var(--text); font-size: 12.5px;
+  transition: border-color 0.15s;
+}
+.search-wrap input::placeholder { color: var(--text-dim); }
+.search-wrap input:focus { border-color: var(--gold); }
+.search-icon {
+  position: absolute; left: 15px; top: 50%; transform: translateY(-50%);
+  color: var(--text-dim); font-size: 15px; pointer-events: none;
+}
+.filter-pills { display: flex; gap: 7px; flex-wrap: wrap; }
+
+.search-pills-row {
+  display: flex; gap: 7px; overflow-x: auto; padding: 6px 16px 0;
+  scrollbar-width: none; -ms-overflow-style: none;
+  max-width: 1240px; margin: 0 auto;
+}
+.search-pills-row::-webkit-scrollbar { display: none; }
+
+.pill {
+  padding: 7px 14px; border-radius: 50px; font-size: 12px; font-weight: 500;
+  border: 1px solid var(--border); background: transparent; color: var(--text-muted);
+  cursor: pointer; transition: all 0.15s; white-space: nowrap;
+}
+.pill:hover { border-color: var(--gold); color: var(--gold); }
+.pill.active { background: var(--gold-glow); border-color: var(--gold); color: var(--gold); font-weight: 600; }
+
+/* ============================================================
+   SECTION HEADERS
+   ============================================================ */
+.section-header { margin-bottom: 48px; }
+.section-header.center { text-align: center; }
+.section-eyebrow {
+  font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 12px; display: block;
+}
+.section-title {
+  font-family: var(--font-display); font-size: clamp(24px, 3.5vw, 40px);
+  font-weight: 800; letter-spacing: -1px; line-height: 1.1;
+}
+.section-sub { color: var(--text-muted); font-size: 15px; margin-top: 10px; }
+
+/* ============================================================
+   CATEGORIES
+   ============================================================ */
+#categories { padding: 72px 0; background: var(--bg2); }
+.cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.cat-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 28px 20px; text-align: center;
+  cursor: pointer; transition: border-color 0.2s, box-shadow 0.2s;
+}
+.cat-card:hover { border-color: var(--border-gold); box-shadow: 0 4px 20px var(--gold-glow); }
+.cat-card.active { border-color: var(--gold); background: var(--gold-glow); }
+.cat-icon-wrap {
+  width: 56px; height: 56px; border-radius: 14px; margin: 0 auto 14px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--surface2); font-size: 26px; border: 1px solid var(--border);
+}
+.cat-name { font-family: var(--font-display); font-size: 15px; font-weight: 700; }
+.cat-count { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+
+/* ============================================================
+   PRODUCTS GRID
+   ============================================================ */
+#products { padding: 8px 0 80px; margin-top: 128px; }
+.products-header {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; gap: 16px; flex-wrap: wrap;
+}
+.products-title { font-family: var(--font-display); font-size: 22px; font-weight: 800; }
+.filter-row { display: flex; gap: 7px; flex-wrap: wrap; }
+
+#product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+
+.product-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  display: flex; flex-direction: column;
+}
+.product-card:hover { border-color: var(--border-gold); box-shadow: var(--shadow); }
+
+.product-img-wrap {
+  aspect-ratio: 4/3; background: var(--surface2);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; position: relative; overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+.product-img-placeholder {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.product-img-placeholder span:first-child { font-size: 48px; }
+.product-img-placeholder span:last-child {
+  font-size: 11px; color: var(--text-dim); font-weight: 500; text-align: center; padding: 0 12px;
+}
+.product-img-real {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.product-badges {
+  position: absolute; top: 10px; left: 10px; display: flex; gap: 5px; flex-wrap: wrap;
+}
+.product-viewers {
+  position: absolute; bottom: 8px; right: 8px;
+  background: rgba(0,0,0,0.6); color: #fff; font-size: 10px; font-weight: 600;
+  padding: 3px 8px; border-radius: 20px; backdrop-filter: blur(4px);
+}
+[data-theme="light"] .product-viewers { background: rgba(0,0,0,0.5); }
+
+.product-body { padding: 14px; flex: 1; }
+.product-cat {
+  font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 5px;
+}
+.product-name { font-weight: 700; font-size: 14px; line-height: 1.3; margin-bottom: 6px; }
+.product-specs { font-size: 11.5px; color: var(--text-muted); line-height: 1.5; }
+
+.product-footer {
+  padding: 12px 14px; border-top: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.product-price { font-family: var(--font-display); font-size: 17px; font-weight: 800; color: var(--text); }
+.product-price-label { font-size: 10px; color: var(--text-dim); }
+
+.btn-buy {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--wa); color: #fff; padding: 8px 14px; border-radius: 50px;
+  font-size: 12px; font-weight: 700; transition: background 0.15s;
+}
+.btn-buy:hover { background: #1da851; }
+.btn-buy svg { width: 13px; height: 13px; fill: #fff; flex-shrink: 0; }
+
+.btn-buy-disabled {
+  display: flex; align-items: center;
+  background: var(--surface2); color: var(--text-dim);
+  padding: 8px 14px; border-radius: 50px; font-size: 12px; font-weight: 600;
+  border: 1px solid var(--border);
+}
+
+.add-to-cart-btn {
+  display: flex; align-items: center; gap: 5px;
+  background: var(--surface2); border: 1px solid var(--border); color: var(--text-muted);
+  padding: 7px 12px; border-radius: 50px; font-size: 11px; font-weight: 600;
+  cursor: pointer; transition: all 0.15s;
+}
+.add-to-cart-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+.stock-warning {
+  font-size: 10.5px; color: var(--red); font-weight: 600; margin-top: 4px;
+}
+
+/* ============================================================
+   CART / STICKY BAR
+   ============================================================ */
+#cart-bar {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 900;
+  background: var(--surface); border-top: 1px solid var(--border);
+  padding: 12px 20px; display: none;
+}
+#cart-bar.visible { display: flex; }
+.cart-bar-inner {
+  max-width: 1240px; margin: 0 auto; width: 100%;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.cart-count-label { font-size: 13px; font-weight: 600; }
+.cart-count-label span { color: var(--gold); }
+.cart-bar-actions { display: flex; gap: 8px; }
+.btn-view-cart {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--gold); color: #0a0a0a;
+  padding: 10px 20px; border-radius: 50px; font-size: 13px; font-weight: 700;
+}
+.btn-clear-cart {
+  background: var(--surface2); border: 1px solid var(--border); color: var(--text-muted);
+  padding: 10px 16px; border-radius: 50px; font-size: 13px; font-weight: 600;
+}
+
+/* Cart Modal */
+#cart-modal {
+  display: none; position: fixed; inset: 0; z-index: 2000;
+  background: var(--modal-bg); align-items: center; justify-content: center; padding: 20px;
+}
+#cart-modal.open { display: flex; }
+.cart-modal-box {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); width: 100%; max-width: 520px; max-height: 85vh;
+  overflow-y: auto;
+}
+.cart-modal-header {
+  padding: 20px 20px 0; display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;
+}
+.cart-modal-title { font-family: var(--font-display); font-size: 20px; font-weight: 800; }
+.modal-close-btn {
+  width: 32px; height: 32px; border-radius: 50%; background: var(--surface2);
+  display: flex; align-items: center; justify-content: center; font-size: 14px;
+  color: var(--text-muted); border: 1px solid var(--border);
+}
+.cart-items { padding: 0 20px; }
+.cart-item {
+  display: flex; align-items: center; gap: 12px; padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.cart-item:last-child { border-bottom: none; }
+.cart-item-emoji { font-size: 28px; }
+.cart-item-info { flex: 1; }
+.cart-item-name { font-size: 13.5px; font-weight: 600; line-height: 1.3; }
+.cart-item-price { font-size: 12px; color: var(--gold); font-weight: 700; margin-top: 2px; }
+.cart-qty { display: flex; align-items: center; gap: 8px; }
+.qty-btn {
+  width: 26px; height: 26px; border-radius: 50%; background: var(--surface2);
+  border: 1px solid var(--border); color: var(--text); font-size: 14px;
+  display: flex; align-items: center; justify-content: center;
+}
+.qty-num { font-size: 13px; font-weight: 600; min-width: 20px; text-align: center; }
+.cart-item-remove { color: var(--red); font-size: 12px; cursor: pointer; }
+.cart-total { padding: 16px 20px; border-top: 1px solid var(--border); }
+.cart-total-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.cart-total-label { font-size: 15px; font-weight: 600; }
+.cart-total-amt { font-family: var(--font-display); font-size: 22px; font-weight: 800; color: var(--gold); }
+.cart-actions { display: flex; flex-direction: column; gap: 10px; }
+.btn-checkout-wa {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: var(--wa); color: #fff; padding: 14px; border-radius: 50px;
+  font-size: 15px; font-weight: 700;
+}
+.btn-checkout-form {
+  background: var(--surface2); border: 1px solid var(--border); color: var(--text);
+  padding: 12px; border-radius: 50px; font-size: 14px; font-weight: 600; text-align: center;
+}
+.cart-empty { text-align: center; padding: 40px 20px; color: var(--text-muted); }
+.cart-empty-icon { font-size: 44px; margin-bottom: 12px; }
+
+/* ============================================================
+   FEATURED CAROUSEL
+   ============================================================ */
+#featured { padding: 64px 0; background: var(--bg2); }
+.carousel-wrap { overflow: hidden; border-radius: var(--radius-lg); }
+.carousel-track { display: flex; transition: transform 0.3s ease; }
+.carousel-slide {
+  min-width: 100%; background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  padding: 40px; display: flex; align-items: center; gap: 40px;
+}
+.carousel-emoji { font-size: 80px; flex-shrink: 0; }
+.carousel-info { flex: 1; }
+.carousel-cat { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.carousel-name { font-family: var(--font-display); font-size: clamp(20px, 3vw, 30px); font-weight: 800; margin-bottom: 10px; }
+.carousel-specs { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
+.carousel-price { font-family: var(--font-display); font-size: 28px; font-weight: 800; color: var(--gold); margin-bottom: 20px; }
+.carousel-ctas { display: flex; gap: 10px; flex-wrap: wrap; }
+.carousel-controls { display: flex; justify-content: center; gap: 10px; margin-top: 20px; }
+.carousel-btn {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--surface); border: 1px solid var(--border); color: var(--text);
+  font-size: 16px; display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+}
+.carousel-btn:hover { border-color: var(--gold); color: var(--gold); }
+.carousel-dots { display: flex; gap: 6px; align-items: center; }
+.carousel-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--border); transition: background 0.2s, width 0.2s;
+}
+.carousel-dot.active { background: var(--gold); width: 18px; border-radius: 3px; }
+
+/* Carousel auto-play progress bar */
+.carousel-progress {
+  height: 3px; background: var(--border);
+  border-radius: 2px; margin-top: 14px; overflow: hidden;
+}
+.carousel-progress-bar {
+  height: 100%; background: var(--gold);
+  width: 0%; border-radius: 2px;
+  transition: width linear;
+}
+
+
+/* ============================================================
+   DEAL COUNTDOWN
+   ============================================================ */
+#deal-section { padding: 64px 0; }
+.deal-banner {
+  background: var(--surface); border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg); padding: 40px; display: flex;
+  align-items: center; gap: 40px; flex-wrap: wrap;
+}
+.deal-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 8px;
+}
+.deal-title { font-family: var(--font-display); font-size: clamp(22px, 3vw, 32px); font-weight: 800; margin-bottom: 12px; }
+.deal-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 20px; }
+.countdown { display: flex; gap: 16px; margin-bottom: 24px; }
+.count-block { text-align: center; }
+.count-num {
+  font-family: var(--font-display); font-size: 32px; font-weight: 800;
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 8px 16px; min-width: 60px; display: block; color: var(--text);
+}
+.count-label { font-size: 10px; color: var(--text-muted); margin-top: 4px; letter-spacing: 0.5px; }
+.count-sep { font-size: 28px; font-weight: 800; color: var(--gold); align-self: flex-start; padding-top: 8px; }
+
+/* ============================================================
+   TRENDING
+   ============================================================ */
+#trending { padding: 64px 0; background: var(--bg2); }
+.trending-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 20px; }
+.trending-main {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 36px; display: flex; flex-direction: column; justify-content: flex-end;
+  min-height: 360px; position: relative;
+}
+.trending-main-emoji { font-size: 80px; margin-bottom: 20px; }
+.trending-main h3 { font-family: var(--font-display); font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+.trending-main-specs { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+.trending-price { font-family: var(--font-display); font-size: 32px; font-weight: 800; color: var(--gold); margin-bottom: 20px; }
+.trending-side { display: flex; flex-direction: column; gap: 16px; }
+.trending-item {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 20px; display: flex; gap: 14px; align-items: center;
+  cursor: pointer; transition: border-color 0.15s;
+}
+.trending-item:hover { border-color: var(--border-gold); }
+.trending-item-emoji { font-size: 32px; flex-shrink: 0; }
+.trending-item-name { font-size: 13.5px; font-weight: 700; line-height: 1.3; }
+.trending-item-price { font-size: 15px; font-weight: 800; color: var(--gold); margin-top: 3px; }
+.trending-rank {
+  width: 28px; height: 28px; border-radius: 50%; background: var(--gold-glow);
+  border: 1px solid var(--border-gold); color: var(--gold); font-size: 12px;
+  font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: auto;
+}
+
+/* ============================================================
+   TRUST SECTION
+   ============================================================ */
+#trust { padding: 64px 0; }
+.trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.trust-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 24px 20px;
+}
+.trust-icon { font-size: 28px; margin-bottom: 14px; }
+.trust-title { font-family: var(--font-display); font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+.trust-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+/* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+#testimonials { padding: 64px 0; background: var(--bg2); }
+.testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+/* Rotating testimonials */
+.testi-grid { position: relative; min-height: 220px; }
+.testi-card {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.testi-card.fade-out { opacity: 0; transform: translateY(8px); }
+.testi-card.fade-in  { opacity: 1; transform: translateY(0); }
+.testi-dots {
+  display: flex; gap: 6px; justify-content: center; margin-top: 16px;
+}
+.testi-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--border); transition: background 0.3s;
+}
+.testi-dot.active { background: var(--gold); }
+.review-pending {
+  text-align:center; padding: 10px; font-size: 12px;
+  color: var(--text-muted); font-style: italic;
+}
+
+.testi-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 24px;
+}
+.testi-stars { color: var(--gold); font-size: 13px; margin-bottom: 12px; letter-spacing: 2px; }
+.testi-text { font-size: 13.5px; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px; }
+.testi-author { display: flex; align-items: center; gap: 10px; }
+.testi-avatar {
+  width: 36px; height: 36px; border-radius: 50%; background: var(--gold-glow);
+  border: 1px solid var(--border-gold); display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+}
+.testi-name { font-size: 13px; font-weight: 700; }
+.testi-location { font-size: 11px; color: var(--text-dim); }
+
+/* ============================================================
+   AI PANEL
+   ============================================================ */
+#ai-fab { position: fixed; bottom: 24px; right: 20px; z-index: 800; }
+#ai-panel {
+  display: none; position: absolute; bottom: 64px; right: 0;
+  width: 340px; background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow);
+}
+#ai-panel.open { display: flex; flex-direction: column; }
+.ai-panel-header {
+  padding: 14px 16px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--surface2);
+}
+.ai-header-left { display: flex; align-items: center; gap: 10px; }
+.ai-avatar {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--gold-glow); border: 1px solid var(--border-gold);
+  display: flex; align-items: center; justify-content: center; font-size: 16px;
+}
+.ai-header-info h4 { font-size: 13px; font-weight: 700; }
+.ai-header-info p { font-size: 11px; color: var(--green); }
+.ai-close { color: var(--text-muted); font-size: 14px; }
+.ai-messages { height: 260px; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+.ai-msg { display: flex; }
+.ai-msg.user { justify-content: flex-end; }
+.ai-msg-bubble {
+  max-width: 82%; padding: 10px 14px; border-radius: 16px;
+  font-size: 13px; line-height: 1.5;
+}
+.ai-msg.ai .ai-msg-bubble { background: var(--surface2); color: var(--text); border-radius: 4px 16px 16px 16px; }
+.ai-msg.user .ai-msg-bubble { background: var(--gold); color: #0a0a0a; font-weight: 500; border-radius: 16px 16px 4px 16px; }
+.typing-indicator { display: flex; gap: 4px; align-items: center; }
+.typing-indicator span { width: 6px; height: 6px; border-radius: 50%; background: var(--text-muted); }
+.ai-suggestions { padding: 10px 14px 0; display: flex; gap: 6px; flex-wrap: wrap; }
+.ai-sugg {
+  padding: 6px 12px; border-radius: 50px;
+  background: var(--surface2); border: 1px solid var(--border); color: var(--text-muted);
+  font-size: 11px; cursor: pointer; transition: all 0.15s;
+}
+.ai-sugg:hover { border-color: var(--gold); color: var(--gold); }
+.ai-input-row {
+  padding: 12px 14px; border-top: 1px solid var(--border); display: flex; gap: 8px;
+}
+.ai-input {
+  flex: 1; background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 50px; padding: 9px 14px; color: var(--text); font-size: 13px;
+  transition: border-color 0.15s;
+}
+.ai-input:focus { border-color: var(--gold); }
+.ai-send {
+  width: 36px; height: 36px; border-radius: 50%; background: var(--gold);
+  color: #0a0a0a; font-size: 14px; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.ai-btn {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--text); padding: 11px 18px; border-radius: 50px;
+  font-size: 13px; font-weight: 600; box-shadow: var(--shadow);
+  transition: border-color 0.15s;
+}
+.ai-btn:hover { border-color: var(--gold); }
+.ai-dot {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--green);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer { background: var(--surface); border-top: 1px solid var(--border); padding: 60px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
+.footer-brand p { font-size: 13.5px; color: var(--text-muted); line-height: 1.7; margin-top: 14px; max-width: 260px; }
+.footer-socials { display: flex; gap: 8px; margin-top: 18px; }
+.social-btn {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--surface2); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center; font-size: 15px;
+  transition: border-color 0.15s;
+}
+.social-btn:hover { border-color: var(--gold); }
+.footer-col h4 { font-family: var(--font-display); font-size: 14px; font-weight: 700; margin-bottom: 16px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-col ul li a { font-size: 13.5px; color: var(--text-muted); transition: color 0.15s; }
+.footer-col ul li a:hover { color: var(--gold); }
+.footer-contact { display: flex; flex-direction: column; gap: 10px; }
+.contact-item { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: var(--text-muted); }
+.contact-icon { flex-shrink: 0; }
+.footer-bottom {
+  border-top: 1px solid var(--border); padding: 20px 0;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
+  font-size: 12px; color: var(--text-dim);
+}
+
+/* Footer logo (secret admin trigger) */
+#footer-logo-tap { cursor: pointer; user-select: none; }
+
+/* ============================================================
+   ADMIN AUTH MODAL
+   ============================================================ */
+#admin-auth-modal {
+  display: none; position: fixed; inset: 0; z-index: 5000;
+  background: var(--modal-bg); align-items: center; justify-content: center; padding: 20px;
+}
+#admin-auth-modal.open { display: flex; }
+.auth-box {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); width: 100%; max-width: 380px; padding: 32px;
+}
+.auth-header { text-align: center; margin-bottom: 24px; }
+.auth-icon { font-size: 36px; margin-bottom: 10px; }
+.auth-title { font-family: var(--font-display); font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+.auth-sub { font-size: 13px; color: var(--text-muted); }
+.auth-step { display: none; flex-direction: column; gap: 14px; }
+.auth-step.active { display: flex; }
+.auth-label { font-size: 12px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.5px; margin-bottom: 4px; }
+.auth-input {
+  width: 100%; background: var(--surface2); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 12px 14px; color: var(--text); font-size: 14px;
+  transition: border-color 0.15s;
+}
+.auth-input:focus { border-color: var(--gold); }
+.auth-btn {
+  width: 100%; background: var(--gold); color: #0a0a0a;
+  padding: 13px; border-radius: 50px; font-size: 14px; font-weight: 700;
+  transition: background 0.15s;
+}
+.auth-btn:hover { background: var(--gold-light); }
+.auth-cancel {
+  background: none; color: var(--text-muted); font-size: 13px; text-align: center; padding: 4px;
+}
+.auth-error { font-size: 12px; color: var(--red); background: var(--red-bg); padding: 8px 12px; border-radius: 6px; display: none; }
+/* OTP Colour Puzzle */
+.otp-puzzle-wrap { margin-bottom: 8px; }
+.otp-puzzle-label {
+  font-size: 11.5px; color: var(--text-muted); margin-bottom: 12px;
+  text-align: center; line-height: 1.7;
+}
+.otp-colour-tiles {
+  display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
+  padding: 6px; background: transparent; border: none;
+  border-radius: 0; margin-bottom: 8px;
+}
+.otp-ctile {
+  width: 14px; height: 17px; border-radius: 3px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 8px; font-weight: 800;
+  color: #fff; user-select: none; pointer-events: none;
+  box-shadow: none;
+}
+.otp-ctile.red   { background: linear-gradient(135deg,#e53e3e,#c53030); }
+.otp-ctile.blue  { background: linear-gradient(135deg,#3182ce,#2b6cb0); }
+.otp-ctile.green { background: linear-gradient(135deg,#38a169,#276749); }
+.otp-legend {
+  display: flex; gap: 14px; justify-content: center; margin-bottom: 14px; flex-wrap: wrap;
+}
+.otp-legend-item {
+  display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text-muted);
+}
+.otp-legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+.otp-legend-dot.red   { background: #e53e3e; }
+.otp-legend-dot.blue  { background: #3182ce; }
+.otp-legend-dot.green { background: #38a169; }
+.otp-hint { font-size: 12px; color: var(--text-muted); text-align: center; line-height: 1.5; }
+
+/* ============================================================
+   ADMIN PANEL
+   ============================================================ */
+/* ============================================================
+   ADMIN PANEL — Premium v4.0
+   ============================================================ */
+#admin-panel {
+  display: none; position: fixed; inset: 0; z-index: 4000;
+  background: rgba(0,0,0,0.85); backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); overflow-y: auto;
+}
+.admin-wrap {
+  background: var(--surface);
+  border: 1px solid rgba(201,168,76,0.15);
+  max-width: 680px; margin: 20px auto 40px;
+  border-radius: 20px; overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,168,76,0.08);
+}
+.admin-header {
+  padding: 18px 20px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  background: linear-gradient(135deg, var(--surface2) 0%, var(--surface) 100%);
+  position: sticky; top: 0; z-index: 10;
+}
+.admin-header h2 {
+  font-family: var(--font-display); font-size: 16px; font-weight: 800;
+  background: linear-gradient(135deg, var(--gold) 0%, #f0c050 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.admin-close {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--surface2); border: 1px solid var(--border);
+  color: var(--text-muted); font-size: 13px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s;
+}
+.admin-close:hover { background: var(--border); color: var(--text); }
+
+/* Tabs */
+.admin-tabs {
+  display: flex; overflow-x: auto; background: var(--surface2);
+  border-bottom: 1px solid var(--border); scrollbar-width: none; gap: 0;
+}
+.admin-tabs::-webkit-scrollbar { display: none; }
+.admin-tab {
+  flex-shrink: 0; padding: 11px 14px; font-size: 11.5px; font-weight: 600;
+  color: var(--text-muted); background: none; border: none; cursor: pointer;
+  border-bottom: 2px solid transparent; transition: all 0.15s;
+  font-family: var(--font-body); white-space: nowrap; letter-spacing: 0.2px;
+}
+.admin-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+.admin-tab:hover:not(.active) { color: var(--text); background: rgba(255,255,255,0.03); }
+
+/* Tab content */
+.admin-tab-content { display: none; }
+
+/* Forms */
+.admin-form { padding: 20px; }
+.form-row { margin-bottom: 14px; }
+.form-label {
+  font-size: 11px; font-weight: 700; color: var(--text-muted);
+  letter-spacing: 0.8px; text-transform: uppercase; display: block; margin-bottom: 6px;
+}
+.form-input, .form-select, .form-textarea {
+  width: 100%; background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 10px; padding: 10px 13px; color: var(--text); font-size: 13px;
+  font-family: var(--font-body); transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,168,76,0.1);
+}
+.form-textarea { resize: vertical; min-height: 70px; }
+.form-select { appearance: none; cursor: pointer; }
+.form-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+/* Product rows */
+.admin-products-list { padding: 0 20px 20px; }
+.admin-product-row {
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 12px; padding: 12px 14px;
+  display: flex; align-items: center; gap: 10px; margin-bottom: 8px;
+  transition: border-color 0.15s;
+}
+.admin-product-row:hover { border-color: rgba(201,168,76,0.3); }
+.admin-product-emoji { font-size: 22px; flex-shrink: 0; }
+.admin-product-info { flex: 1; min-width: 0; }
+.admin-product-info h4 { font-size: 12.5px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.admin-product-info p { font-size: 10.5px; color: var(--text-muted); margin-top: 2px; }
+.admin-product-price { font-family: var(--font-display); font-weight: 800; color: var(--gold); font-size: 13px; flex-shrink: 0; }
+
+/* Buttons */
+.btn-admin-save {
+  width: 100%; background: linear-gradient(135deg, var(--gold) 0%, #d4a831 100%);
+  color: #0a0a0a; padding: 12px; border-radius: 50px;
+  font-size: 13.5px; font-weight: 800; margin-top: 8px;
+  transition: all 0.2s; letter-spacing: 0.3px; border: none; cursor: pointer;
+}
+.btn-admin-save:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(201,168,76,0.4); }
+.btn-del {
+  background: rgba(220,38,38,0.1); border: 1px solid rgba(220,38,38,0.25);
+  color: #ef4444; padding: 6px 10px; border-radius: 8px;
+  font-size: 11px; font-weight: 700; cursor: pointer; flex-shrink: 0;
+  transition: all 0.15s;
+}
+.btn-del:hover { background: rgba(220,38,38,0.2); }
+.ai-gen-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.25);
+  color: var(--gold); padding: 6px 12px; border-radius: 50px;
+  font-size: 11px; font-weight: 600; margin-top: 6px; cursor: pointer; transition: all 0.15s;
+}
+.ai-gen-btn:hover { background: rgba(201,168,76,0.15); }
+.admin-mini-select, .admin-mini-input {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 8px; padding: 5px 9px; color: var(--text);
+  font-size: 11px; font-family: var(--font-body); outline: none;
+}
+.admin-mini-select:focus, .admin-mini-input:focus { border-color: var(--gold); }
+.btn-save-edit {
+  background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.25);
+  color: var(--gold); padding: 5px 10px; border-radius: 8px;
+  font-size: 11px; font-weight: 700; cursor: pointer; transition: all 0.15s;
+}
+.btn-save-edit:hover { background: rgba(201,168,76,0.2); }
+.btn-gh-sync {
+  background: var(--surface2); border: 1px solid var(--border);
+  color: var(--text-muted); padding: 7px 12px; border-radius: 8px;
+  font-size: 11px; font-weight: 600; cursor: pointer; transition: all 0.15s;
+}
+.btn-gh-sync:hover { border-color: var(--gold); color: var(--gold); }
+.form-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.ai-gen-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--gold-glow); border: 1px solid var(--border-gold);
+  color: var(--gold); padding: 7px 14px; border-radius: 50px; font-size: 11.5px; font-weight: 600;
+  margin-top: 7px; transition: background 0.15s;
+}
+.ai-gen-btn:hover { background: rgba(201,168,76,0.18); }
+
+.btn-admin-save {
+  width: 100%; background: var(--gold); color: #0a0a0a;
+  padding: 13px; border-radius: 50px; font-size: 14px; font-weight: 700;
+  margin-top: 8px; transition: background 0.15s;
+}
+.btn-admin-save:hover { background: var(--gold-light); }
+
+.admin-products-list { padding: 0 24px 24px; }
+.admin-product-row {
+  background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 14px; display: flex; align-items: center; gap: 12px; margin-bottom: 8px;
+}
+.admin-product-emoji { font-size: 24px; }
+.admin-product-info { flex: 1; }
+.admin-product-info h4 { font-size: 13px; font-weight: 600; }
+.admin-product-info p { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.admin-product-price { font-family: var(--font-display); font-weight: 800; color: var(--gold); font-size: 15px; }
+.btn-del {
+  background: var(--red-bg); border: 1px solid rgba(220,38,38,0.2);
+  color: var(--red); padding: 5px 10px; border-radius: 6px; font-size: 11.5px;
+}
+
+/* ============================================================
+   NO RESULTS
+   ============================================================ */
+.no-results { text-align: center; padding: 60px 24px; color: var(--text-dim); grid-column: 1/-1; }
+.no-results-icon { font-size: 40px; margin-bottom: 14px; }
+.no-results h3 { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--text-muted); }
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+#toast {
+  position: fixed; top: 90px; right: 20px; z-index: 9000;
+  background: var(--surface); border: 1px solid var(--border-gold);
+  border-radius: var(--radius-sm); padding: 12px 18px;
+  font-size: 13px; font-weight: 500; color: var(--gold);
+  box-shadow: var(--shadow); display: none;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  .cat-grid { grid-template-columns: repeat(2, 1fr); }
+  .trust-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .testi-grid { grid-template-columns: 1fr 1fr; }
+  .trending-grid { grid-template-columns: 1fr; }
+  .trending-main { min-height: 280px; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .btn-wa-nav { display: none; }
+  #product-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .products-header { flex-direction: column; align-items: flex-start; }
+  .filter-row { width: 100%; overflow-x: auto; padding-bottom: 4px; flex-wrap: nowrap; }
+  .pill { flex-shrink: 0; }
+  #ai-panel { right: 0; bottom: 60px; width: calc(100vw - 32px); }
+  #ai-fab { right: 12px; bottom: 12px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .testi-grid { grid-template-columns: 1fr; }
+  .carousel-slide { flex-direction: column; text-align: center; gap: 20px; }
+  .carousel-emoji { font-size: 60px; }
+  .filter-pills { display: none; }
+  .search-inner { flex-direction: column; align-items: stretch; }
+  .hero-stats { gap: 20px; }
+  .section-pad { padding: 52px 0; }
+  .deal-banner { flex-direction: column; gap: 28px; }
+  .countdown { gap: 10px; }
+  .count-num { font-size: 24px; padding: 6px 12px; min-width: 50px; }
+  #cart-bar .cart-count-label { font-size: 12px; }
+  .hero-title { letter-spacing: -1.5px; }
+}
+
+@media (max-width: 480px) {
+  #product-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .product-name { font-size: 13px; }
+  .product-specs { font-size: 11px; }
+  .cat-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .cat-card { padding: 20px 14px; }
+  .trust-grid { grid-template-columns: 1fr 1fr; }
+  .carousel-slide { padding: 24px; }
+  .admin-wrap { margin: 0; border-radius: 0; min-height: 100vh; }
+}
+
+/* ============================================================
+   PRODUCT DETAIL MODAL
+   ============================================================ */
+#product-modal {
+  display: none; position: fixed; inset: 0; z-index: 3000;
+  background: var(--modal-bg); align-items: flex-start; justify-content: center;
+  padding: 20px; overflow-y: auto;
+}
+#product-modal.open { display: flex; }
+.pmodal-box {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); width: 100%; max-width: 560px;
+  margin: auto; overflow: hidden;
+}
+.pmodal-header {
+  padding: 16px 20px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--surface2); position: sticky; top: 0; z-index: 1;
+}
+.pmodal-header h3 { font-family: var(--font-display); font-size: 15px; font-weight: 800; }
+.pmodal-gallery { position: relative; background: var(--surface2); }
+.pmodal-main-img {
+  width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block;
+}
+.pmodal-main-placeholder {
+  width: 100%; aspect-ratio: 4/3; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 10px;
+  background: var(--surface2);
+}
+.pmodal-main-placeholder span:first-child { font-size: 72px; }
+.pmodal-main-placeholder span:last-child { font-size: 13px; color: var(--text-dim); }
+.pmodal-thumbs {
+  display: flex; gap: 8px; padding: 10px 16px; overflow-x: auto;
+  background: var(--surface2); border-bottom: 1px solid var(--border);
+}
+.pmodal-thumb {
+  width: 56px; height: 56px; flex-shrink: 0; border-radius: 8px;
+  border: 2px solid var(--border); cursor: pointer; overflow: hidden;
+  transition: border-color 0.15s; background: var(--surface3);
+  display: flex; align-items: center; justify-content: center; font-size: 24px;
+}
+.pmodal-thumb.active { border-color: var(--gold); }
+.pmodal-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.pmodal-img-count {
+  position: absolute; bottom: 10px; right: 10px;
+  background: rgba(0,0,0,0.6); color: #fff; font-size: 11px; font-weight: 600;
+  padding: 3px 9px; border-radius: 20px; backdrop-filter: blur(4px);
+}
+.pmodal-body { padding: 20px; }
+.pmodal-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.pmodal-name { font-family: var(--font-display); font-size: 20px; font-weight: 800; line-height: 1.2; margin-bottom: 6px; }
+.pmodal-cat { font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+.pmodal-price { font-family: var(--font-display); font-size: 28px; font-weight: 800; color: var(--gold); margin-bottom: 6px; }
+.pmodal-stock-row { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; font-size: 13px; }
+.pmodal-qty-badge {
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 20px; padding: 3px 10px; font-size: 12px; font-weight: 600; color: var(--text-muted);
+}
+.pmodal-divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+.pmodal-specs-title { font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+.pmodal-specs { font-size: 13.5px; color: var(--text); line-height: 1.7; }
+.pmodal-actions { padding: 16px 20px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 10px; }
+.pmodal-btn-buy {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: var(--wa); color: #fff; padding: 14px; border-radius: 50px;
+  font-size: 15px; font-weight: 700; width: 100%;
+}
+.pmodal-btn-cart {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: var(--gold); color: #0a0a0a; padding: 13px; border-radius: 50px;
+  font-size: 14px; font-weight: 700; width: 100%; border: none; cursor: pointer;
+}
+.pmodal-btn-cart:hover { background: var(--gold-light); }
+
+
+/* GitHub DB status */
+.gh-status-bar {
+  display: flex; align-items: center; gap: 8px; padding: 10px 14px;
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 10px; margin-bottom: 16px; font-size: 12px;
+}
+.gh-dot { width: 8px; height: 8px; border-radius: 50%; background: #aaa; flex-shrink:0; }
+.gh-dot.green  { background: #38a169; }
+.gh-dot.red    { background: #e53e3e; }
+.gh-dot.yellow { background: #d69e2e; animation: pulse 1s infinite; }
+.gh-token-row { display: flex; gap: 8px; margin-bottom: 12px; }
+.gh-token-row input { flex: 1; font-size: 12px; }
+.btn-gh-save {
+  background: var(--gold-glow); border: 1px solid var(--border-gold);
+  color: var(--gold); padding: 8px 14px; border-radius: 8px;
+  font-size: 12px; font-weight: 700; white-space: nowrap; cursor: pointer;
+}
+.btn-gh-sync {
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--text-muted); padding: 6px 12px; border-radius: 8px;
+  font-size: 11px; font-weight: 600; cursor: pointer;
+}
+.btn-gh-sync:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Admin image list */
+.img-url-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
+.img-url-row { display: flex; gap: 8px; align-items: center; }
+.img-url-row input { flex: 1; }
+.btn-remove-img {
+  background: var(--red-bg); border: 1px solid rgba(220,38,38,0.2);
+  color: var(--red); padding: 8px 10px; border-radius: 6px; font-size: 12px; flex-shrink: 0;
+}
+.btn-add-img {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: var(--surface2); border: 1px solid var(--border); color: var(--text-muted);
+  padding: 7px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer;
+}
+.btn-add-img:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Admin product row edits */
+.admin-edit-row {
+  display: flex; gap: 6px; align-items: center; margin-top: 6px; flex-wrap: wrap;
+}
+.admin-mini-select, .admin-mini-input {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 6px; padding: 4px 8px; color: var(--text); font-size: 11px;
+  font-family: var(--font-body);
+}
+.btn-save-edit {
+  background: var(--gold-glow); border: 1px solid var(--border-gold);
+  color: var(--gold); padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600;
+}
+
+
+/* ============================================================
+   SERVICES SECTION
+   ============================================================ */
+#services { padding: 60px 0; background: var(--bg2); }
+.services-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 8px;
+}
+.services-title {
+  font-family: var(--font-display); font-size: clamp(24px,4vw,36px);
+  font-weight: 800; line-height: 1.2; margin-bottom: 10px;
+}
+.services-sub {
+  color: var(--text-muted); font-size: 14px; margin-bottom: 36px;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 0;
+}
+.service-card {
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 12px; padding: 12px 10px 10px;
+  text-align: center; transition: border-color 0.2s, transform 0.2s;
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+}
+.service-card:hover {
+  border-color: var(--gold); transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(201,168,76,0.15);
+}
+.service-icon { font-size: 26px; margin-bottom: 4px; }
+.service-name { font-family: var(--font-display); font-size: 12px; font-weight: 800; margin-bottom: 3px; }
+.service-desc { display:none; }
+.service-wa-btn { display:inline-flex;align-items:center;justify-content:center;gap:4px;background:var(--wa);color:#fff;padding:5px 10px;border-radius:20px;font-size:10px;font-weight:700;width:100%;text-decoration:none;margin-top:4px;white-space:nowrap; }
+.service-wa-btn:hover { opacity: 0.9; }
+
+/* Service meta info */
+.service-meta {
+  font-size: 10.5px; color: var(--text-dim); margin-bottom: 12px;
+  padding: 4px 8px; background: var(--surface2);
+  border-radius: 20px; display: inline-block;
+}
+/* Service card hover gold border */
+.service-card { cursor: default; }
+
+@media (max-width: 768px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+
+/* ============================================================
+   FEEDBACK FORM
+   ============================================================ */
+.feedback-form-wrap {
+  margin-top: 48px; background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  padding: 28px 24px;
+}
+.feedback-form-title {
+  font-family: var(--font-display); font-size: 18px; font-weight: 800;
+  margin-bottom: 4px;
+}
+.feedback-form-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
+.feedback-stars-row { display: flex; gap: 6px; margin-bottom: 16px; }
+.star-btn {
+  font-size: 28px; background: none; border: none; cursor: pointer;
+  transition: transform 0.1s; filter: grayscale(1); opacity: 0.4;
+}
+.star-btn.selected { filter: none; opacity: 1; transform: scale(1.15); }
+.feedback-inputs { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+.feedback-inputs input, .feedback-inputs textarea {
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 10px; padding: 11px 14px; color: var(--text);
+  font-family: var(--font-body); font-size: 13.5px; resize: none;
+}
+.feedback-inputs input:focus, .feedback-inputs textarea:focus {
+  outline: none; border-color: var(--gold);
+}
+.feedback-inputs textarea { min-height: 90px; }
+.feedback-submit-btn {
+  background: var(--gold); color: #0a0a0a; border: none;
+  border-radius: 50px; padding: 12px 28px; font-size: 14px;
+  font-weight: 700; font-family: var(--font-display); cursor: pointer;
+  width: 100%; transition: background 0.2s;
+}
+.feedback-submit-btn:hover { background: var(--gold-light); }
+.feedback-success {
+  display: none; text-align: center; padding: 20px;
+  font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--gold);
+}
+.customer-reviews-list { margin-top: 24px; display: flex; flex-direction: column; gap: 12px; }
+.customer-review-item {
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 12px; padding: 14px 16px;
+}
+.customer-review-stars { font-size: 14px; margin-bottom: 4px; color: var(--gold); }
+.customer-review-text { font-size: 13px; color: var(--text); line-height: 1.6; margin-bottom: 8px; }
+.customer-review-meta { font-size: 11px; color: var(--text-muted); }
+
+
+.svc-chip {
+  display:inline-flex;align-items:center;gap:5px;padding:7px 12px;
+  background:var(--surface2);border:1px solid var(--border);border-radius:50px;
+  font-size:11.5px;font-weight:600;color:var(--text);white-space:nowrap;
+  text-decoration:none;transition:all 0.15s;flex-shrink:0;
+}
+.svc-chip:hover { border-color:var(--gold);color:var(--gold); }
+#services-grid::-webkit-scrollbar { display:none; }
+</style>
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="EliteTech">
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <!-- Performance -->
+  <link rel="dns-prefetch" href="https://elitetech-proxy.samuelphilip002.workers.dev">
+  <link rel="preconnect" href="https://elitetech-proxy.samuelphilip002.workers.dev">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <div class="logo-icon">⚡</div>
+      <div class="logo-text">Elite<span>Tech</span></div>
+    </div>
+    <div class="nav-links">
+      <a href="#categories">Categories</a>
+      <a href="#products">Products</a>
+      <a href="#featured">Featured</a>
+      <a href="#trust">About</a>
+    </div>
+    <div class="nav-actions">
+      <div class="notif-wrapper" style="position:relative;display:inline-flex;">
+        <button class="notif-bell nav-btn" onclick="toggleNotifPanel()" title="Notifications" style="position:relative;">
+          🔔
+          <span class="notif-badge" id="notif-badge" style="display:none;position:absolute;top:-4px;right:-4px;background:#e53e3e;color:#fff;border-radius:50%;width:16px;height:16px;font-size:9px;font-weight:800;align-items:center;justify-content:center;">0</span>
+        </button>
+        <div class="notif-panel" id="notif-panel" style="display:none;position:absolute;top:44px;right:0;width:300px;background:var(--surface);border:1px solid var(--border);border-radius:14px;z-index:2000;box-shadow:0 8px 32px rgba(0,0,0,0.3);max-height:400px;overflow-y:auto;">
+          <div style="padding:14px 16px;border-bottom:1px solid var(--border);font-weight:700;font-size:13px;display:flex;justify-content:space-between;align-items:center;">
+            🔔 Notifications
+            <button onclick="clearNotifs()" style="font-size:10px;color:var(--text-muted);background:none;border:none;cursor:pointer;">Clear all</button>
+          </div>
+          <div id="notif-list" style="padding:8px;"></div>
+        </div>
+      </div>
+      <button class="theme-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle theme">🌙</button>
+      <button class="nav-search-btn" style="width:38px;height:38px;background:var(--surface);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;" onclick="focusSearch()">🔍</button>
+      <button class="nav-search-btn" style="width:38px;height:38px;background:var(--surface);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;position:relative;" onclick="openCart()" id="nav-cart-btn">
+        🛒<span id="nav-cart-count" style="display:none;position:absolute;top:-4px;right:-4px;background:var(--gold);color:#0a0a0a;font-size:9px;font-weight:800;width:16px;height:16px;border-radius:50%;display:none;align-items:center;justify-content:center;"></span>
+      </button>
+      <a class="btn-wa-nav" href="https://wa.me/2349036006553" target="_blank">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.549 4.122 1.51 5.857L.057 23.882l6.207-1.63A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.37l-.36-.213-3.683.967.983-3.596-.234-.371A9.82 9.82 0 012.182 12c0-5.422 4.396-9.818 9.818-9.818 5.422 0 9.818 4.396 9.818 9.818 0 5.422-4.396 9.818-9.818 9.818z"/></svg>
+        WhatsApp
+      </a>
+      <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu">
+  <a href="#categories" onclick="toggleMenu()">Categories</a>
+  <a href="#products" onclick="toggleMenu()">Products</a>
+  <a href="#featured" onclick="toggleMenu()">Featured</a>
+  <a href="#trust" onclick="toggleMenu()">About Us</a>
+  <a href="https://wa.me/2349036006553" target="_blank">📲 WhatsApp Us</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<!-- <section id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-dot"></span>
+        Maiduguri's #1 Tech Store
+      </div>
+      <h1 class="hero-title">
+        Premium Phones,<br>
+        Laptops &<br><span class="accent">Gaming Devices</span><br>in Nigeria.
+      </h1>
+      <p class="hero-sub">Your trusted tech plug in Maiduguri — genuine brand new & UK-used devices at unbeatable prices. Fast delivery, real warranty.</p>
+      <div class="hero-ctas">
+        <a href="#products" class="btn-primary">⚡ Shop Now</a>
+        <a href="https://wa.me/2349036006553?text=Hi%20Elite%20Tech!%20I%20want%20to%20shop%20for%20a%20device." target="_blank" class="btn-wa">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.549 4.122 1.51 5.857L.057 23.882l6.207-1.63A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.37l-.36-.213-3.683.967.983-3.596-.234-.371A9.82 9.82 0 012.182 12c0-5.422 4.396-9.818 9.818-9.818 5.422 0 9.818 4.396 9.818 9.818 0 5.422-4.396 9.818-9.818 9.818z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Happy Customers</div></div>
+        <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Genuine Products</div></div>
+        <div class="stat"><div class="stat-num">24h</div><div class="stat-label">Fast Delivery</div></div>
+        <div class="stat"><div class="stat-num">4.9★</div><div class="stat-label">Customer Rating</div></div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- ===== MARQUEE STRIP ===== -->
+<div class="marquee-strip">
+  <div class="marquee-inner" id="marquee-inner">
+    <span class="marquee-item">✅ 100% Genuine Devices</span>
+    <span class="marquee-item">🚚 Same-Day Delivery in Maiduguri</span>
+    <span class="marquee-item">🛡️ Warranty on All Products</span>
+    <span class="marquee-item">📲 Order via WhatsApp</span>
+    <span class="marquee-item">💰 Best Prices in Nigeria</span>
+    <span class="marquee-item">🔄 7-Day Easy Returns</span>
+    <span class="marquee-item">📦 Nationwide Shipping</span>
+    <span class="marquee-item">🤖 AI Product Advisor</span>
+    <span class="marquee-item">✅ 100% Genuine Devices</span>
+    <span class="marquee-item">🚚 Same-Day Delivery in Maiduguri</span>
+    <span class="marquee-item">🛡️ Warranty on All Products</span>
+    <span class="marquee-item">📲 Order via WhatsApp</span>
+    <span class="marquee-item">💰 Best Prices in Nigeria</span>
+    <span class="marquee-item">🔄 7-Day Easy Returns</span>
+    <span class="marquee-item">📦 Nationwide Shipping</span>
+    <span class="marquee-item">🤖 AI Product Advisor</span>
+  </div>
+</div>
+
+<!-- ===== SEARCH BAR ===== -->
+
+<!-- ===== SERVICES ===== -->
+<section id="services" style="padding:16px 0 10px;border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+      <div>
+        <div class="services-label" style="margin-bottom:1px;font-size:10px;">🔧 Professional Services</div>
+        <h2 class="services-title" style="font-size:15px;margin:0;font-weight:800;">What We Install & Fix</h2>
+      </div>
+      <a href="https://wa.me/2349036006553?text=Hi%20EliteTech%2C%20I%20need%20a%20service" target="_blank" style="font-size:10px;color:var(--gold);white-space:nowrap;font-weight:700;text-decoration:none;">Book → WA</a>
+    </div>
+    <div style="display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px;" id="services-grid">
+      <a href="https://wa.me/2349036006553?text=Hi%20EliteTech%2C%20I%20need%20CCTV%20Installation" target="_blank" class="svc-chip">📷 CCTV</a>
+      <a href="https://wa.me/2349036006553?text=Hi%20EliteTech%2C%20I%20need%20Satellite%20Dish%20installation" target="_blank" class="svc-chip">📡 Dish</a>
+      <a href="https://wa.me/2349036006553?text=Hi%20EliteTech%2C%20I%20need%20Solar%20System%20installation" target="_blank" class="svc-chip">☀️ Solar</a>
+      <a href="https://wa.me/2349036006553?text=Hi%20EliteTech%2C%20I%20need%20Sound%20System%20setup" target="_blank" class="svc-chip">🔊 Sound</a>
+      <a href="https://wa.me/2349036006553?text=Hi%20EliteTech%2C%20I%20need%20Device%20Repair" target="_blank" class="svc-chip">🔧 Repairs</a>
+      <a href="https://wa.me/2349036006553?text=Hi%20EliteTech%2C%20I%20need%20Networking%20setup" target="_blank" class="svc-chip">📶 Network</a>
+      <a href="https://wa.me/2349036006553?text=Hi%20EliteTech%2C%20I%20need%20Computer%20Services" target="_blank" class="svc-chip">💻 Computer</a>
+      <a href="https://wa.me/2349036006553?text=Hi%20EliteTech%2C%20I%20have%20a%20custom%20request" target="_blank" class="svc-chip">🔌 More</a>
+    </div>
+  </div>
+</section>
+
+<div id="search-bar">
+  <div class="search-inner">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-input" placeholder="Search phones, laptops, gaming devices..." oninput="filterProducts(); Analytics.trackSearch(this.value)">
+    </div>
+  </div>
+  <div class="search-pills-row">
+    <button class="pill active" data-cat="all" onclick="setFilter('all', this)">All</button>
+    <button class="pill" data-cat="phone" onclick="setFilter('phone', this)">📱 Phones</button>
+    <button class="pill" data-cat="laptop" onclick="setFilter('laptop', this)">💻 Laptops</button>
+    <button class="pill" data-cat="gaming" onclick="setFilter('gaming', this)">🎮 Gaming</button>
+    <button class="pill" data-cat="accessory" onclick="setFilter('accessory', this)">🎧 Accessories</button>
+    <button class="pill" data-cond="new" onclick="setCondFilter('new', this)">🟢 New</button>
+    <button class="pill" data-cond="used" onclick="setCondFilter('used', this)">🟡 UK Used</button>
+  </div>
+</div>
+
+<!-- ===== CATEGORIES ===== -->
+<!-- <section id="categories">
+  <div class="container" style="padding-top:72px;padding-bottom:72px;">
+    <div class="section-header center">
+      <span class="section-eyebrow">Browse By Category</span>
+      <h2 class="section-title">What are you looking for?</h2>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card" onclick="setFilter('phone', null); document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+        <div class="cat-icon-wrap">📱</div>
+        <div class="cat-name">Smartphones</div>
+        <div class="cat-count" id="cat-count-phone">Loading...</div>
+      </div>
+      <div class="cat-card" onclick="setFilter('laptop', null); document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+        <div class="cat-icon-wrap">💻</div>
+        <div class="cat-name">Laptops</div>
+        <div class="cat-count" id="cat-count-laptop">Loading...</div>
+      </div>
+      <div class="cat-card" onclick="setFilter('gaming', null); document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+        <div class="cat-icon-wrap">🎮</div>
+        <div class="cat-name">Gaming Devices</div>
+        <div class="cat-count" id="cat-count-gaming">Loading...</div>
+      </div>
+      <div class="cat-card" onclick="setFilter('accessory', null); document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+        <div class="cat-icon-wrap">🎧</div>
+        <div class="cat-name">Accessories</div>
+        <div class="cat-count" id="cat-count-accessory">Loading...</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCTS ===== -->
+<section id="products">
+  <div class="container" style="padding-top:64px;padding-bottom:80px;">
+    <div class="products-header" style="margin-bottom:12px;">
+      <div class="filter-row">
+    </div>
+    <div id="product-grid"></div>
+  </div>
+</section>
+
+<!-- ===== FEATURED CAROUSEL ===== -->
+<section id="featured">
+  <div class="container" style="padding-top:64px;padding-bottom:64px;">
+    <div class="section-header center">
+      <span class="section-eyebrow">Editor's Pick</span>
+      <h2 class="section-title">Featured Products</h2>
+      <p class="section-sub">Hand-picked premium devices our customers love most</p>
+    </div>
+    <div class="carousel-wrap">
+      <div class="carousel-track" id="carousel-track"></div>
+    </div>
+    <div class="carousel-progress"><div class="carousel-progress-bar" id="carousel-progress-bar"></div></div>
+    <div class="carousel-controls">
+      <button class="carousel-btn" onclick="carousel(-1)">←</button>
+      <div class="carousel-dots" id="carousel-dots"></div>
+      <button class="carousel-btn" onclick="carousel(1)">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DEAL POPUP MODAL ===== -->
+<div id="deal-popup" style="display:none;position:fixed;inset:0;z-index:3500;background:rgba(0,0,0,0.8);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:16px;">
+  <div style="background:var(--surface);border:1px solid rgba(201,168,76,0.3);border-radius:20px;max-width:360px;width:100%;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.6);">
+    <div style="background:linear-gradient(135deg,#e53e3e,#c53030);padding:20px;text-align:center;position:relative;">
+      <button onclick="closeDealPopup()" style="position:absolute;top:10px;right:10px;background:rgba(255,255,255,0.2);border:none;color:#fff;width:28px;height:28px;border-radius:50%;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;">✕</button>
+      <div style="font-size:40px;margin-bottom:8px;">🔥</div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,0.8);text-transform:uppercase;margin-bottom:4px;">Limited Time Offer</div>
+      <h2 style="font-family:var(--font-display);font-size:22px;font-weight:900;color:#fff;line-height:1.2;">Flash Deal — Up to 20% Off</h2>
+      <p style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:6px;">Premium UK-used iPhones & Samsung at unbeatable prices</p>
+    </div>
+    <div style="padding:20px;text-align:center;">
+      <div style="font-size:11px;color:var(--text-muted);font-weight:600;letter-spacing:0.5px;margin-bottom:10px;">⏱ OFFER EXPIRES IN</div>
+      <div style="display:flex;gap:10px;justify-content:center;margin-bottom:20px;">
+        <div style="background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;min-width:60px;">
+          <div class="count-num" id="count-h" style="font-family:var(--font-display);font-size:28px;font-weight:900;color:var(--gold);display:block;">00</div>
+          <div style="font-size:9px;color:var(--text-muted);font-weight:600;letter-spacing:0.5px;margin-top:2px;">HOURS</div>
+        </div>
+        <div style="display:flex;align-items:center;font-size:24px;color:var(--text-muted);font-weight:700;">:</div>
+        <div style="background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;min-width:60px;">
+          <div class="count-num" id="count-m" style="font-family:var(--font-display);font-size:28px;font-weight:900;color:var(--gold);display:block;">00</div>
+          <div style="font-size:9px;color:var(--text-muted);font-weight:600;letter-spacing:0.5px;margin-top:2px;">MINS</div>
+        </div>
+        <div style="display:flex;align-items:center;font-size:24px;color:var(--text-muted);font-weight:700;">:</div>
+        <div style="background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;min-width:60px;">
+          <div class="count-num" id="count-s" style="font-family:var(--font-display);font-size:28px;font-weight:900;color:var(--gold);display:block;">00</div>
+          <div style="font-size:9px;color:var(--text-muted);font-weight:600;letter-spacing:0.5px;margin-top:2px;">SECS</div>
+        </div>
+      </div>
+      <a href="https://wa.me/2349036006553?text=Hi!%20I%20want%20to%20claim%20the%20flash%20deal!" target="_blank" onclick="closeDealPopup()" style="display:flex;align-items:center;justify-content:center;gap:8px;background:var(--wa);color:#fff;padding:13px;border-radius:50px;font-weight:700;font-size:14px;text-decoration:none;margin-bottom:10px;">
+        💬 Claim Deal on WhatsApp
+      </a>
+      <button onclick="closeDealPopup()" style="background:none;border:none;color:var(--text-dim);font-size:12px;cursor:pointer;">No thanks, I'll pay full price</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== TRENDING ===== -->
+<section id="trending">
+  <div class="container" style="padding-top:64px;padding-bottom:64px;">
+    <div class="section-header">
+      <span class="section-eyebrow">Hot Right Now</span>
+      <h2 class="section-title">Trending This Week</h2>
+    </div>
+    <div class="trending-grid" id="trending-grid"></div>
+  </div>
+</section>
+
+<!-- ===== TRUST SECTION ===== -->
+<section id="trust">
+  <div class="container" style="padding-top:64px;padding-bottom:64px;">
+    <div class="section-header center">
+      <span class="section-eyebrow">Why Choose Us</span>
+      <h2 class="section-title">The Elite Difference</h2>
+      <p class="section-sub">We don't just sell tech — we deliver trust</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card"><div class="trust-icon">✅</div><div class="trust-title">100% Genuine</div><div class="trust-desc">Every device verified. Brand new sealed & certified UK-used items only. No fakes, ever.</div></div>
+      <div class="trust-card"><div class="trust-icon">🚚</div><div class="trust-title">Fast Delivery</div><div class="trust-desc">Same-day delivery in Maiduguri. Nationwide delivery within 1–3 business days.</div></div>
+      <div class="trust-card"><div class="trust-icon">🛡️</div><div class="trust-title">Warranty & Support</div><div class="trust-desc">All devices come with warranty support. After-sales service that actually cares.</div></div>
+      <div class="trust-card"><div class="trust-icon">💬</div><div class="trust-title">WhatsApp Support</div><div class="trust-desc">Reach us instantly on WhatsApp. Real humans, fast replies, 7 days a week.</div></div>
+      <div class="trust-card"><div class="trust-icon">💰</div><div class="trust-title">Best Prices</div><div class="trust-desc">Competitive pricing on every product. Price-match guarantee available — ask us!</div></div>
+      <div class="trust-card"><div class="trust-icon">🔄</div><div class="trust-title">Easy Returns</div><div class="trust-desc">Not satisfied? Hassle-free returns within 7 days on all eligible items.</div></div>
+      <div class="trust-card"><div class="trust-icon">🏆</div><div class="trust-title">500+ Customers</div><div class="trust-desc">Trusted by hundreds of customers across Maiduguri and all over Nigeria.</div></div>
+      <div class="trust-card"><div class="trust-icon">📲</div><div class="trust-title">Installment Plans</div><div class="trust-desc">Flexible payment plans available. Chat with us to discuss what works for you.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section id="testimonials">
+  <div class="container" style="padding-top:64px;padding-bottom:64px;">
+    <div class="section-header center">
+      <span class="section-eyebrow">Customer Reviews</span>
+      <h2 class="section-title">What Our Customers Say</h2>
+    </div>
+    <div class="testi-grid" id="testi-grid"></div>
+    <div class="testi-dots" id="testi-dots"></div>
+
+    <!-- Feedback Form -->
+    <div class="feedback-form-wrap">
+      <div class="feedback-form-title">✍️ Leave Your Review</div>
+      <div class="feedback-form-sub">Share your experience with EliteTech</div>
+      <div class="feedback-stars-row" id="star-row">
+        <button class="star-btn" onclick="setStars(1)">⭐</button>
+        <button class="star-btn" onclick="setStars(2)">⭐</button>
+        <button class="star-btn" onclick="setStars(3)">⭐</button>
+        <button class="star-btn" onclick="setStars(4)">⭐</button>
+        <button class="star-btn" onclick="setStars(5)">⭐</button>
+      </div>
+      <div class="feedback-inputs">
+        <input type="text" id="review-name" placeholder="Your name (e.g. Ahmad from Maiduguri)">
+        <textarea id="review-text" placeholder="Tell us about your experience..."></textarea>
+      </div>
+      <button class="feedback-submit-btn" onclick="submitReview()">⭐ Submit Review</button>
+      <div class="feedback-success" id="feedback-success">🎉 Thank you! Your review has been posted.</div>
+      <div class="customer-reviews-list" id="customer-reviews-list"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" id="footer-logo-tap">
+          <div class="logo-icon">⚡</div>
+          <div class="logo-text">Elite<span>Tech</span></div>
+        </div>
+        <p>PKsamust's Elite Tech — your trusted premium tech destination in Maiduguri, Nigeria. Genuine devices, real support, unbeatable prices.</p>
+        <div class="footer-socials">
+          <a class="social-btn" href="https://wa.me/2349036006553" target="_blank">📱</a>
+          <a class="social-btn" href="#" target="_blank">📘</a>
+          <a class="social-btn" href="#" target="_blank">📸</a>
+          <a class="social-btn" href="#" target="_blank">🐦</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#" onclick="setFilter('phone',null)">📱 Smartphones</a></li>
+          <li><a href="#" onclick="setFilter('laptop',null)">💻 Laptops</a></li>
+          <li><a href="#" onclick="setFilter('gaming',null)">🎮 Gaming</a></li>
+          <li><a href="#" onclick="setFilter('accessory',null)">🎧 Accessories</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#products">All Products</a></li>
+          <li><a href="#featured">Featured</a></li>
+          <li><a href="#trust">About Us</a></li>
+          <li><a href="https://wa.me/2349036006553" target="_blank">Order Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact">
+          <div class="contact-item"><span class="contact-icon">📍</span> Maiduguri, Borno State, Nigeria</div>
+          <div class="contact-item"><span class="contact-icon">📞</span> +234 903 600 6553</div>
+          <div class="contact-item"><span class="contact-icon">📞</span> +234 812 327 0542</div>
+          <div class="contact-item"><span class="contact-icon">🕐</span> Mon–Sat: 8am – 8pm</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 PKsamust's Elite Tech. All rights reserved.</p>
+      <p>Built with ❤️ for Maiduguri, Nigeria</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== AI ASSISTANT ===== -->
+<div id="ai-fab">
+  <div id="ai-panel">
+    <div class="ai-panel-header">
+      <div class="ai-header-left">
+        <div class="ai-avatar">🤖</div>
+        <div class="ai-header-info">
+          <h4>Elite AI Assistant</h4>
+          <p>● Online — Ready to help</p>
+        </div>
+      </div>
+      <button class="ai-close" onclick="toggleAI()">✕</button>
+    </div>
+    <div class="ai-messages" id="ai-messages">
+      <div class="ai-msg ai">
+        <div class="ai-msg-bubble">👋 Welcome to Elite Tech! I'm your AI assistant. Ask me anything — "best phone under ₦200k", "gaming laptop for design", or "compare iPhone vs Samsung"!</div>
+      </div>
+    </div>
+    <div class="ai-suggestions" id="ai-suggestions">
+      <button class="ai-sugg" onclick="sendAISugg(this)">Best phone under ₦200k</button>
+      <button class="ai-sugg" onclick="sendAISugg(this)">Gaming laptop for design</button>
+      <button class="ai-sugg" onclick="sendAISugg(this)">UK used iPhone options</button>
+    </div>
+    <div class="ai-input-row">
+      <input class="ai-input" id="ai-input" type="text" placeholder="Ask about any product..." onkeydown="if(event.key==='Enter') sendAIMsg()">
+      <button class="ai-send" onclick="sendAIMsg()">➤</button>
+    </div>
+  </div>
+  <button class="ai-btn" onclick="toggleAI()">
+    <span>🤖</span>
+    <span>Ask Elite AI</span>
+    <span class="ai-dot"></span>
+  </button>
+</div>
+
+
+<!-- ===== PRODUCT DETAIL MODAL ===== -->
+<div id="product-modal">
+  <div class="pmodal-box">
+    <div class="pmodal-header">
+      <h3 id="pmodal-title">Product Details</h3>
+      <button class="modal-close-btn" onclick="closeProductModal()">✕</button>
+    </div>
+    <div class="pmodal-gallery" id="pmodal-gallery"></div>
+    <div class="pmodal-body">
+      <div class="pmodal-badges" id="pmodal-badges"></div>
+      <div class="pmodal-name" id="pmodal-name"></div>
+      <div class="pmodal-cat" id="pmodal-cat"></div>
+      <div class="pmodal-price" id="pmodal-price"></div>
+      <div class="pmodal-stock-row" id="pmodal-stock-row"></div>
+      <hr class="pmodal-divider">
+      <div class="pmodal-specs-title">Key Specifications</div>
+      <div class="pmodal-specs" id="pmodal-specs"></div>
+    </div>
+    <div class="pmodal-actions" id="pmodal-actions"></div>
+  </div>
+</div>
+
+<!-- ===== STICKY CART BAR ===== -->
+<div id="cart-bar">
+  <div class="cart-bar-inner">
+    <div class="cart-count-label">🛒 <span id="cart-item-count">0</span> item(s) — <span id="cart-total-label" style="color:var(--gold);font-weight:800;">₦0</span></div>
+    <div class="cart-bar-actions">
+      <button class="btn-clear-cart" onclick="clearCart()">Clear</button>
+      <button class="btn-view-cart" onclick="openCart()">View Cart →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CART MODAL ===== -->
+<div id="cart-modal">
+  <div class="cart-modal-box">
+    <div class="cart-modal-header">
+      <div class="cart-modal-title">🛒 Your Cart</div>
+      <button class="modal-close-btn" onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items-list"></div>
+    <div class="cart-total" id="cart-total-section"></div>
+  </div>
+</div>
+
+<!-- ===== TOAST ===== -->
+<div id="toast"></div>
+
+<!-- ===== ADMIN AUTH MODAL ===== -->
+<div id="admin-auth-modal">
+  <div class="auth-box">
+    <div class="auth-header">
+      <div class="auth-icon">🔐</div>
+      <div class="auth-title">Admin Access</div>
+      <div class="auth-sub">Secure login required</div>
+    </div>
+
+    <!-- Step 1: Password -->
+    <div class="auth-step active" id="auth-step-1">
+      <div>
+        <div class="auth-label">Admin Password</div>
+        <input class="auth-input" id="auth-password" type="password" placeholder="Enter admin password" onkeydown="if(event.key==='Enter') checkPassword()">
+      </div>
+      <div class="auth-error" id="auth-pw-error">Incorrect password. Try again.</div>
+      <button class="auth-btn" onclick="checkPassword()">Continue →</button>
+      <button class="auth-cancel" onclick="closeAdminAuth()">Cancel</button>
+    </div>
+
+    <!-- Step 2: OTP Colour Puzzle -->
+    <div class="auth-step" id="auth-step-2">
+      <input class="auth-input" id="auth-otp" type="text" maxlength="6" placeholder="Enter code" onkeydown="if(event.key==='Enter') checkOTP()">
+      <div class="auth-error" id="auth-otp-error">Incorrect code. Try again.</div>
+      <button class="auth-btn" onclick="checkOTP()">🔓 Open Admin Panel</button>
+      <button class="auth-cancel" onclick="closeAdminAuth()">Cancel</button>
+      <div style="margin-top:18px;text-align:center;">
+        <span style="font-size:9px;color:var(--text-dim);letter-spacing:0.3px;">e.g.&nbsp;</span>
+        <span id="otp-colour-tiles" style="display:inline-flex;gap:3px;vertical-align:middle;"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ADMIN PANEL ===== -->
+<div id="admin-panel">
+  <div class="admin-wrap">
+
+    <!-- Admin Header -->
+    <div class="admin-header">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span style="font-size:22px;">⚙️</span>
+        <div>
+          <div style="font-size:15px;font-weight:800;font-family:var(--font-display);">EliteTech Admin</div>
+          <div style="font-size:10px;color:var(--text-muted);" id="admin-session-status">Session active</div>
+        </div>
+      </div>
+      <button class="admin-close" onclick="closeAdmin()">✕</button>
+    </div>
+
+    <!-- Admin Tabs -->
+    <div class="admin-tabs" id="admin-tabs">
+      <button class="admin-tab active" onclick="switchAdminTab('products')">📦 Products</button>
+      <button class="admin-tab" onclick="switchAdminTab('add')">➕ Add</button>
+      <button class="admin-tab" onclick="switchAdminTab('services')">🔧 Services</button>
+      <button class="admin-tab" onclick="switchAdminTab('categories')">📁 Categories</button>
+      <button class="admin-tab" onclick="switchAdminTab('analytics')">📊 Analytics</button>
+      <button class="admin-tab" onclick="switchAdminTab('activity')">📋 Logs</button>
+      <button class="admin-tab" onclick="switchAdminTab('settings')">⚙️ Settings</button>
+    </div>
+
+    <!-- TAB: Products List -->
+    <div class="admin-tab-content" id="tab-products">
+      <div class="admin-form" style="padding-bottom:8px;">
+        <div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
+          <input class="form-input" id="admin-search-input" placeholder="🔍 Search products..." oninput="filterAdminList()" style="flex:1;min-width:140px;font-size:12px;">
+          <button class="btn-gh-sync" onclick="exportProducts()" style="white-space:nowrap;">📥 Export</button>
+        </div>
+        <div style="display:flex;gap:5px;flex-wrap:wrap;">
+          <button class="pill" style="font-size:10px;padding:4px 10px;" onclick="bulkAction('instock')">✅ All In Stock</button>
+          <button class="pill" style="font-size:10px;padding:4px 10px;" onclick="bulkAction('hidden')">👁 Hide All</button>
+          <button class="pill" style="font-size:10px;padding:4px 10px;color:var(--red);" onclick="bulkAction('delete')">🗑 Delete All</button>
+        </div>
+      </div>
+      <div id="admin-products-list" class="admin-products-list"></div>
+    </div>
+
+    <!-- TAB: Add Product -->
+    <div class="admin-tab-content" id="tab-add" style="display:none;">
+      <div class="admin-form">
+        <!-- Cloud DB status -->
+        <div style="margin-bottom:20px;padding:14px;background:var(--surface2);border:1px solid var(--border);border-radius:12px;">
+          <div style="font-size:12px;font-weight:800;font-family:var(--font-display);margin-bottom:10px;">☁️ Cloud Database</div>
+          <div class="gh-status-bar">
+            <div class="gh-dot" id="gh-dot"></div>
+            <span id="gh-status-text">🔄 Connecting...</span>
+            <button class="btn-gh-sync" onclick="syncFromGitHub()" style="margin-left:auto;">↻ Sync</button>
+          </div>
+        </div>
+        <div class="form-row"><label class="form-label">Product Name</label>
+          <input class="form-input" id="p-name" placeholder="e.g. iPhone 15 Pro Max 256GB"></div>
+        <div class="form-grid2">
+          <div class="form-row"><label class="form-label">Category</label>
+            <select class="form-select" id="p-cat">
+              <option value="phone">📱 Smartphone</option>
+              <option value="laptop">💻 Laptop</option>
+              <option value="gaming">🎮 Gaming</option>
+              <option value="tablet">📟 Tablet</option>
+              <option value="watch">⌚ Smartwatch</option>
+              <option value="audio">🎧 Audio/Earbuds</option>
+              <option value="accessory">🔌 Accessory</option>
+              <option value="pc">🖥️ PC & Components</option>
+              <option value="camera">📷 Camera</option>
+              <option value="tv">📺 TV & Display</option>
+              <option value="smart-home">🏠 Smart Home</option>
+              <option value="network">📶 Networking</option>
+              <option value="power">🔋 Power & Charging</option>
+              <option value="software">💿 Software</option>
+              <option value="digital">📦 Digital Product</option>
+            </select></div>
+          <div class="form-row"><label class="form-label">Condition</label>
+            <select class="form-select" id="p-cond">
+              <option value="new">🟢 Brand New</option>
+              <option value="uk-used">🟡 UK Used</option>
+              <option value="ng-used">🟠 NG Used</option>
+              <option value="refurb">🔵 Refurbished</option>
+              <option value="open-box">⚪ Open Box</option>
+              <option value="like-new">✨ Like New</option>
+              <option value="ex-display">🏷️ Ex-Display</option>
+            </select></div>
+        </div>
+        <div class="form-grid2">
+          <div class="form-row"><label class="form-label">Price (₦)</label>
+            <input class="form-input" id="p-price" type="number" placeholder="350000"></div>
+          <div class="form-row"><label class="form-label">Quantity</label>
+            <input class="form-input" id="p-qty" type="number" placeholder="5" min="0" value="1"></div>
+        </div>
+        <div class="form-grid2">
+          <div class="form-row"><label class="form-label">Stock Status</label>
+            <select class="form-select" id="p-stock">
+              <option value="instock">✅ In Stock</option>
+              <option value="limited">⚡ Limited</option>
+              <option value="coming-soon">🔔 Coming Soon</option>
+              <option value="sold">❌ Sold Out</option>
+              <option value="hidden">👁️ Hidden</option>
+            </select></div>
+          <div class="form-row"><label class="form-label">Featured?</label>
+            <select class="form-select" id="p-featured">
+              <option value="no">No</option>
+              <option value="yes">⭐ Yes — Featured</option>
+            </select></div>
+        </div>
+        <div class="form-grid2">
+          <div class="form-row"><label class="form-label">Emoji Icon</label>
+            <input class="form-input" id="p-emoji" placeholder="📱"></div>
+          <div class="form-row"><label class="form-label">Warranty</label>
+            <input class="form-input" id="p-warranty" placeholder="e.g. 1 Year Apple"></div>
+        </div>
+        <div class="form-row"><label class="form-label">Specifications</label>
+          <textarea class="form-textarea" id="p-specs" placeholder="e.g. 6.7&quot; OLED, A17 Pro, 256GB, USB-C"></textarea>
+          <button class="ai-gen-btn" onclick="aiGenerateSpecs()">✨ Auto-Generate with AI</button></div>
+        <div class="form-row"><label class="form-label">Product Images (up to 5 URLs)</label>
+          <div class="img-url-list" id="img-url-list">
+            <div class="img-url-row">
+              <input class="form-input" type="url" placeholder="https://example.com/image1.jpg">
+              <button class="btn-remove-img" onclick="removeImgRow(this)">✕</button>
+            </div>
+          </div>
+          <button class="btn-add-img" onclick="addImgRow()">+ Add Image URL</button></div>
+        <div class="form-row"><label class="form-label">Tags (comma separated)</label>
+          <input class="form-input" id="p-tags" placeholder="e.g. bestseller, 5G, gaming"></div>
+        <button class="btn-admin-save" onclick="adminAddProduct()">✅ Save Product</button>
+      </div>
+    </div>
+
+    <!-- TAB: Services -->
+    <div class="admin-tab-content" id="tab-services" style="display:none;">
+      <div class="admin-form">
+        <div style="font-size:13px;font-weight:800;font-family:var(--font-display);margin-bottom:16px;">➕ Add Service</div>
+        <div class="form-row"><label class="form-label">Service Name</label>
+          <input class="form-input" id="svc-name" placeholder="e.g. CCTV Installation"></div>
+        <div class="form-row"><label class="form-label">Description</label>
+          <textarea class="form-textarea" id="svc-desc" placeholder="What does this service include?"></textarea></div>
+        <div class="form-grid2">
+          <div class="form-row"><label class="form-label">Price / Rate</label>
+            <input class="form-input" id="svc-price" placeholder="From ₦5,000"></div>
+          <div class="form-row"><label class="form-label">Duration</label>
+            <input class="form-input" id="svc-duration" placeholder="2–4 hours"></div>
+        </div>
+        <div class="form-grid2">
+          <div class="form-row"><label class="form-label">Icon (emoji)</label>
+            <input class="form-input" id="svc-icon" placeholder="📷" maxlength="4"></div>
+          <div class="form-row"><label class="form-label">Status</label>
+            <select class="form-select" id="svc-status">
+              <option value="active">✅ Available</option>
+              <option value="busy">⏳ Currently Busy</option>
+              <option value="hidden">👁️ Hidden</option>
+            </select></div>
+        </div>
+        <div class="form-row"><label class="form-label">WhatsApp Booking Message</label>
+          <input class="form-input" id="svc-wa" placeholder="Hi EliteTech, I need CCTV Installation"></div>
+        <button class="btn-admin-save" onclick="adminAddService()">✅ Save Service</button>
+      </div>
+      <div id="services-admin-list" style="padding:0 16px 24px;"></div>
+    </div>
+
+    <!-- TAB: Categories -->
+    <div class="admin-tab-content" id="tab-categories" style="display:none;">
+      <div class="admin-form">
+        <div style="font-size:13px;font-weight:800;font-family:var(--font-display);margin-bottom:16px;">➕ Add Category</div>
+        <div class="form-row"><label class="form-label">Category Name</label>
+          <input class="form-input" id="cat-name" placeholder="e.g. Cameras"></div>
+        <div class="form-grid2">
+          <div class="form-row"><label class="form-label">Icon (emoji)</label>
+            <input class="form-input" id="cat-icon" placeholder="📷" maxlength="4"></div>
+          <div class="form-row"><label class="form-label">Slug (ID)</label>
+            <input class="form-input" id="cat-slug" placeholder="camera"></div>
+        </div>
+        <button class="btn-admin-save" onclick="adminAddCategory()">✅ Save Category</button>
+      </div>
+      <div id="categories-admin-list"></div>
+    </div>
+
+    <!-- TAB: Analytics -->
+    <div class="admin-tab-content" id="tab-analytics" style="display:none;">
+      <div class="admin-form" id="analytics-content">
+        <div style="text-align:center;padding:24px;color:var(--text-muted);">Loading analytics...</div>
+      </div>
+    </div>
+
+    <!-- TAB: Activity Log -->
+    <div class="admin-tab-content" id="tab-activity" style="display:none;">
+      <div class="admin-form" id="activity-content">
+        <div style="text-align:center;padding:24px;color:var(--text-muted);">Loading logs...</div>
+      </div>
+    </div>
+
+    <!-- TAB: Settings -->
+    <div class="admin-tab-content" id="tab-settings" style="display:none;">
+      <div class="admin-form">
+        <div style="font-size:13px;font-weight:800;font-family:var(--font-display);margin-bottom:16px;">🏪 Store Settings</div>
+        <div class="form-row"><label class="form-label">Store Name</label>
+          <input class="form-input" id="set-name" placeholder="EliteTech"></div>
+        <div class="form-row"><label class="form-label">WhatsApp Number</label>
+          <input class="form-input" id="set-wa" placeholder="2349036006553"></div>
+        <div class="form-row"><label class="form-label">Marquee Text (pipe-separated |)</label>
+          <input class="form-input" id="set-marquee" placeholder="✅ 100% GENUINE | 🚚 SAME-DAY DELIVERY"></div>
+        <button class="btn-admin-save" onclick="saveSettings()" style="margin-bottom:8px;">💾 Save Settings</button>
+
+        <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);">
+          <div style="font-size:13px;font-weight:800;font-family:var(--font-display);margin-bottom:12px;">⚡ Flash Sale</div>
+          <div class="form-row"><label class="form-label">Sale Label</label>
+            <input class="form-input" id="set-flash-label" placeholder="Weekend Special"></div>
+          <div class="form-grid2">
+            <div class="form-row"><label class="form-label">Discount %</label>
+              <input class="form-input" id="set-flash-disc" type="number" placeholder="20" min="1" max="90"></div>
+            <div class="form-row"><label class="form-label">Duration (mins)</label>
+              <input class="form-input" id="set-flash-dur" type="number" placeholder="120" min="10"></div>
+          </div>
+          <button class="btn-admin-save" onclick="startFlashSale()" style="background:rgba(229,62,62,0.12);border-color:rgba(229,62,62,0.3);color:#e53e3e;margin-bottom:8px;">⚡ Start Flash Sale</button>
+          <button class="btn-admin-save" onclick="endFlashSale()" style="background:transparent;color:var(--text-muted);">✕ End Flash Sale</button>
+        </div>
+
+        <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);">
+          <div style="font-size:13px;font-weight:800;font-family:var(--font-display);margin-bottom:12px;">☁️ Cloud & Data</div>
+          <div class="gh-status-bar" style="margin-bottom:10px;">
+            <div class="gh-dot" id="gh-dot2"></div>
+            <span id="gh-status-text2">Checking...</span>
+            <button class="btn-gh-sync" onclick="syncFromGitHub()" style="margin-left:auto;">↻ Force Sync</button>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button class="btn-gh-sync" onclick="exportProducts()" style="flex:1;">📥 Export JSON</button>
+            <button class="btn-gh-sync" onclick="backupData()" style="flex:1;">💾 Local Backup</button>
+          </div>
+          <div style="margin-top:8px;font-size:10px;color:var(--text-dim);">Last sync: <span id="last-sync-time">—</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div></div>
+
+<script>
+/* ============================================================
+   THEME SYSTEM
+   ============================================================ */
+// Apply theme immediately before DOM loads (prevents flash)
+const savedTheme = localStorage.getItem('elitetech_theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+
+function toggleTheme() {
+  const cur = document.documentElement.getAttribute('data-theme');
+  const next = cur === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('elitetech_theme', next);
+  updateThemeBtn(next);
+}
+
+function updateThemeBtn(t) {
+  const btn = document.getElementById('theme-toggle');
+  if (btn) btn.textContent = t === 'dark' ? '☀️' : '🌙';
+}
+
+// Update button after DOM is ready
+
+
+/* ============================================================
+   PRODUCT DATA
+   ============================================================ */
+let products = JSON.parse(localStorage.getItem('elitetech_products') || 'null') || [
+  { id: 1, name: "iPhone 15 Pro Max 256GB", cat: "phone", emoji: "📱", condition: "new", price: 950000, stock: "instock", specs: "6.7\" Super Retina XDR OLED, A17 Pro chip, 48MP ProCamera, 256GB, Titanium frame, USB-C, iOS 17", featured: true, img: "", images: [], quantity: 5 },
+  { id: 2, name: "Samsung Galaxy S24 Ultra", cat: "phone", emoji: "📱", condition: "new", price: 880000, stock: "instock", specs: "6.8\" Dynamic AMOLED 2X, Snapdragon 8 Gen 3, 200MP camera, 12GB RAM, 256GB, S-Pen, 5G", featured: true, img: "", images: [], quantity: 5 },
+  { id: 3, name: "iPhone 14 Pro 128GB", cat: "phone", emoji: "📱", condition: "used", price: 420000, stock: "instock", specs: "6.1\" Always-On ProMotion OLED, A16 Bionic, 48MP main camera, Dynamic Island, 5G", featured: false, img: "", images: [], quantity: 5 },
+  { id: 4, name: "Samsung Galaxy A54", cat: "phone", emoji: "📱", condition: "new", price: 180000, stock: "instock", specs: "6.4\" Super AMOLED, Exynos 1380, 50MP triple camera, 128GB, IP67 waterproof, 5000mAh", featured: false, img: "", images: [], quantity: 5 },
+  { id: 5, name: "MacBook Pro M3 14\"", cat: "laptop", emoji: "💻", condition: "new", price: 1650000, stock: "instock", specs: "14\" Liquid Retina XDR, Apple M3 chip, 18GB RAM, 512GB SSD, 18hr battery, macOS Sonoma", featured: true, img: "", images: [], quantity: 5 },
+  { id: 6, name: "Dell XPS 15 Core i9", cat: "laptop", emoji: "💻", condition: "used", price: 750000, stock: "instock", specs: "15.6\" OLED 4K Touch, Intel i9-13900H, 32GB RAM, 1TB SSD, RTX 4060, Windows 11 Pro", featured: true, img: "", images: [], quantity: 5 },
+  { id: 7, name: "HP Pavilion Gaming i7", cat: "laptop", emoji: "💻", condition: "new", price: 480000, stock: "instock", specs: "15.6\" FHD 144Hz, Intel i7-13700H, 16GB DDR5, 512GB NVMe, GTX 1650 4GB, backlit keyboard", featured: false, img: "", images: [], quantity: 5 },
+  { id: 8, name: "Lenovo ThinkPad X1 Carbon", cat: "laptop", emoji: "💻", condition: "used", price: 520000, stock: "limited", specs: "14\" 2.8K OLED, Intel i7-1365U, 16GB LPDDR5, 512GB SSD, Carbon fiber, MIL-SPEC tested", featured: false, img: "", images: [], quantity: 5 },
+  { id: 9, name: "PlayStation 5 Disc Edition", cat: "gaming", emoji: "🎮", condition: "new", price: 650000, stock: "instock", specs: "4K gaming, 60–120fps, DualSense controller, 825GB SSD, Ray Tracing, 3D Audio, 1 game included", featured: true, img: "", images: [], quantity: 5 },
+  { id: 10, name: "Xbox Series X 1TB", cat: "gaming", emoji: "🎮", condition: "new", price: 580000, stock: "instock", specs: "4K 120fps gaming, 1TB Custom SSD, Xbox Game Pass compatible, Quick Resume, Wireless controller", featured: false, img: "", images: [], quantity: 5 },
+  { id: 11, name: "Nintendo Switch OLED", cat: "gaming", emoji: "🎮", condition: "new", price: 220000, stock: "instock", specs: "7\" OLED screen, handheld & TV mode, 64GB internal, enhanced audio, Joy-Con controllers", featured: false, img: "", images: [], quantity: 5 },
+  { id: 12, name: "AirPods Pro 2nd Gen", cat: "accessory", emoji: "🎧", condition: "new", price: 120000, stock: "instock", specs: "Active Noise Cancellation, Adaptive Audio, H2 chip, 30hr total battery, USB-C case", featured: false, img: "", images: [], quantity: 5 },
+  { id: 13, name: "Samsung Galaxy Buds2 Pro", cat: "accessory", emoji: "🎧", condition: "new", price: 85000, stock: "instock", specs: "360° Audio, Intelligent ANC, 24-bit Hi-Fi, IPX7, 29hr total battery, Comfort fit design", featured: false, img: "", images: [], quantity: 5 },
+  { id: 14, name: "iPhone 13 128GB", cat: "phone", emoji: "📱", condition: "used", price: 280000, stock: "instock", specs: "6.1\" Super Retina XDR, A15 Bionic, Dual 12MP cameras, Ceramic Shield, 5G, MagSafe", featured: false, img: "", images: [], quantity: 5 },
+  { id: 15, name: "Logitech G Pro X Headset", cat: "accessory", emoji: "🎧", condition: "new", price: 45000, stock: "limited", specs: "Pro-G 50mm drivers, Blue VO!CE mic, 7.1 DTS Headphone:X, memory foam, aluminium frame", featured: false, img: "", images: [], quantity: 5 },
+  { id: 16, name: "ASUS ROG Phone 8 Pro", cat: "phone", emoji: "📱", condition: "new", price: 720000, stock: "instock", specs: "6.78\" AMOLED 165Hz, Snapdragon 8 Gen 3, 24GB RAM, 1TB, 50MP triple cam, 65W charge", featured: false, img: "", images: [], quantity: 5 },
+];
+
+let currentFilter = 'all';
+let currentCondFilter = '';
+let carouselIndex = 0;
+let cart = JSON.parse(localStorage.getItem('elitetech_cart') || '[]');
+
+function saveProducts() { localStorage.setItem('elitetech_products', JSON.stringify(products)); }
+function saveCart() { localStorage.setItem('elitetech_cart', JSON.stringify(cart)); }
+function fmt(n) { return '₦' + Number(n).toLocaleString(); }
+
+/* ============================================================
+   VIEWERS (Urgency)
+   ============================================================ */
+const viewerCounts = {};
+function getViewers(id) {
+  if (!viewerCounts[id]) viewerCounts[id] = Math.floor(Math.random() * 8) + 2;
+  return viewerCounts[id];
+}
+
+/* ============================================================
+   WHATSAPP LINK
+   ============================================================ */
+function waLink(product, qty = 1) {
+  const num = '2349036006553';
+  const total = product.price * qty;
+  const msg = encodeURIComponent(
+    `Hello Elite Tech! 👋\n\nI want to order:\n\n` +
+    `*Product:* ${product.name}\n` +
+    `*Price:* ${fmt(product.price)}\n` +
+    `*Quantity:* ${qty}\n` +
+    `*Total:* ${fmt(total)}\n` +
+    `*Condition:* ${product.condition === 'new' ? '🟢 Brand New' : '🟡 UK Used'}\n\n` +
+    `Please confirm availability and delivery details.\n\nThank you! 🙏`
+  );
+  return `https://wa.me/${num}?text=${msg}`;
+}
+
+/* ============================================================
+   CART
+   ============================================================ */
+function addToCart(id) {
+  const p = products.find(x => x.id === id);
+  if (!p || p.stock === 'sold') return;
+  const existing = cart.find(x => x.id === id);
+  if (existing) existing.qty += 1;
+  else cart.push({ id, qty: 1 });
+  saveCart();
+  updateCartUI();
+  showToast(`✅ ${p.name.split(' ').slice(0,3).join(' ')} added to cart`);
+}
+
+function removeFromCart(id) {
+  cart = cart.filter(x => x.id !== id);
+  saveCart(); updateCartUI(); renderCartModal();
+}
+
+function changeQty(id, delta) {
+  const item = cart.find(x => x.id === id);
+  if (!item) return;
+  item.qty = Math.max(1, item.qty + delta);
+  saveCart(); updateCartUI(); renderCartModal();
+}
+
+function clearCart() {
+  cart = []; saveCart(); updateCartUI();
+  document.getElementById('cart-bar').classList.remove('visible');
+}
+
+function openCart() {
+  if (cart.length === 0) { showToast('Your cart is empty'); return; }
+  renderCartModal();
+  document.getElementById('cart-modal').classList.add('open');
+}
+
+function closeCart() { document.getElementById('cart-modal').classList.remove('open'); }
+
+function getCartTotal() { return cart.reduce((s, i) => { const p = products.find(x => x.id === i.id); return s + (p ? p.price * i.qty : 0); }, 0); }
+function getCartCount() { return cart.reduce((s, i) => s + i.qty, 0); }
+
+function updateCartUI() {
+  const count = getCartCount();
+  const total = getCartTotal();
+  const bar = document.getElementById('cart-bar');
+  const countEl = document.getElementById('cart-item-count');
+  const totalEl = document.getElementById('cart-total-label');
+  const navCount = document.getElementById('nav-cart-count');
+
+  if (countEl) countEl.textContent = count;
+  if (totalEl) totalEl.textContent = fmt(total);
+  if (bar) { count > 0 ? bar.classList.add('visible') : bar.classList.remove('visible'); }
+  if (navCount) {
+    if (count > 0) { navCount.textContent = count; navCount.style.display = 'flex'; }
+    else navCount.style.display = 'none';
+  }
+}
+
+function renderCartModal() {
+  const list = document.getElementById('cart-items-list');
+  const totalSec = document.getElementById('cart-total-section');
+  if (!list) return;
+
+  if (cart.length === 0) {
+    list.innerHTML = `<div class="cart-empty"><div class="cart-empty-icon">🛒</div><p>Your cart is empty</p></div>`;
+    if (totalSec) totalSec.innerHTML = '';
+    return;
+  }
+
+  list.innerHTML = cart.map(item => {
+    const p = products.find(x => x.id === item.id);
+    if (!p) return '';
+    return `<div class="cart-item">
+      <div class="cart-item-emoji">${p.emoji}</div>
+      <div class="cart-item-info">
+        <div class="cart-item-name">${p.name}</div>
+        <div class="cart-item-price">${fmt(p.price * item.qty)}</div>
+      </div>
+      <div class="cart-qty">
+        <button class="qty-btn" onclick="changeQty(${p.id},-1)">−</button>
+        <span class="qty-num">${item.qty}</span>
+        <button class="qty-btn" onclick="changeQty(${p.id},1)">+</button>
+      </div>
+      <span class="cart-item-remove" onclick="removeFromCart(${p.id})">✕</span>
+    </div>`;
+  }).join('');
+
+  const total = getCartTotal();
+  const waCartMsg = encodeURIComponent(
+    `Hello Elite Tech! 👋\n\nI want to order:\n\n` +
+    cart.map(i => {
+      const p = products.find(x => x.id === i.id);
+      return p ? `• ${p.name} x${i.qty} — ${fmt(p.price * i.qty)}` : '';
+    }).join('\n') +
+    `\n\n*Total: ${fmt(total)}*\n\nPlease confirm and arrange delivery. Thank you!`
+  );
+
+  totalSec.innerHTML = `
+    <div class="cart-total-row">
+      <div class="cart-total-label">Total</div>
+      <div class="cart-total-amt">${fmt(total)}</div>
+    </div>
+    <div class="cart-actions">
+      <a class="btn-checkout-wa" href="https://wa.me/2349036006553?text=${waCartMsg}" target="_blank">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.549 4.122 1.51 5.857L.057 23.882l6.207-1.63A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.37l-.36-.213-3.683.967.983-3.596-.234-.371A9.82 9.82 0 012.182 12c0-5.422 4.396-9.818 9.818-9.818 5.422 0 9.818 4.396 9.818 9.818 0 5.422-4.396 9.818-9.818 9.818z"/></svg>
+        Checkout on WhatsApp
+      </a>
+      <button class="btn-checkout-form" onclick="closeCart()">Continue Shopping</button>
+    </div>`;
+}
+
+/* ============================================================
+   RENDER PRODUCT CARD
+   ============================================================ */
+function renderCard(p) {
+  // Hide sold out and hidden products
+  if (p.stock === 'sold' || p.stock === 'hidden') return '';
+
+  const condBadge = p.condition === 'new'
+    ? '<span class="badge badge-new">🟢 New</span>'
+    : '<span class="badge badge-used">🟡 UK Used</span>';
+  const stockBadge = p.stock === 'sold'
+    ? '<span class="badge badge-sold">Sold Out</span>'
+    : p.stock === 'limited'
+    ? '<span class="badge badge-hot">Limited</span>'
+    : '';
+  const stockWarning = p.stock === 'limited' ? `<div class="stock-warning">⚠️ Only a few left!</div>` : '';
+  const viewers = getViewers(p.id);
+  const catLabel = { phone:'Smartphone', laptop:'Laptop', gaming:'Gaming', accessory:'Accessory' }[p.cat] || p.cat;
+  const imgContent = p.img
+    ? `<img src="${p.img}" alt="${p.name}" class="product-img-real" onerror="this.parentElement.innerHTML='<div class=\\'product-img-placeholder\\'><span>${p.emoji}</span><span>${p.name.split(' ').slice(0,2).join(' ')}</span></div>'">`
+    : `<div class="product-img-placeholder"><span>${p.emoji || '📦'}</span><span>${p.name.split(' ').slice(0,2).join(' ')}</span></div>`;
+
+  const buyBtns = p.stock === 'sold'
+    ? `<span class="btn-buy-disabled">Sold Out</span>`
+    : `<a class="btn-buy" href="${waLink(p)}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.549 4.122 1.51 5.857L.057 23.882l6.207-1.63A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.37l-.36-.213-3.683.967.983-3.596-.234-.371A9.82 9.82 0 012.182 12c0-5.422 4.396-9.818 9.818-9.818 5.422 0 9.818 4.396 9.818 9.818 0 5.422-4.396 9.818-9.818 9.818z"/></svg>
+        Buy
+      </a>`;
+
+  return `<div class="product-card">
+    <div class="product-img-wrap" onclick="openProductModal(${p.id})">
+      ${imgContent}
+      <div class="product-badges">${condBadge}${stockBadge}</div>
+      <div class="product-viewers">👁 ${viewers} viewing</div>
+    </div>
+    <div class="product-body">
+      <div class="product-cat">${catLabel}</div>
+      <div class="product-name" onclick="openProductModal(${p.id})" style="cursor:pointer;">${p.name}</div>
+      <div class="product-specs">${p.specs}</div>
+      ${stockWarning}
+    </div>
+    <div class="product-footer">
+      <div>
+        <div class="product-price-label">Price</div>
+        <div class="product-price">${fmt(p.price)}</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:5px;align-items:flex-end;">
+        ${buyBtns}
+        ${p.stock !== 'sold' ? `<button class="add-to-cart-btn" onclick="addToCart(${p.id})">+ Cart</button>` : ''}
+      </div>
+    </div>
+  </div>`;
+}
+
+/* ============================================================
+   FILTER + RENDER PRODUCTS
+   ============================================================ */
+function renderProducts() {
+  const search = (document.getElementById('search-input')?.value || '').toLowerCase().trim();
+  const grid = document.getElementById('product-grid');
+  if (!grid) return;
+
+  const filtered = products.filter(p => {
+    const matchCat = currentFilter === 'all' || p.cat === currentFilter;
+    const matchCond = !currentCondFilter || p.condition === currentCondFilter;
+    const matchSearch = !search || p.name.toLowerCase().includes(search) || p.specs.toLowerCase().includes(search) || p.cat.toLowerCase().includes(search);
+    return matchCat && matchCond && matchSearch;
+  });
+
+  const countEl = document.getElementById('result-count');
+  if (countEl) countEl.textContent = `(${filtered.length})`;
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div class="no-results"><div class="no-results-icon">🔍</div><h3>No products found</h3><p>Try a different search or filter</p></div>`;
+    return;
+  }
+  grid.innerHTML = filtered.map(renderCard).join('');
+}
+
+
+/* ============================================================
+   ANALYTICS — lightweight page & product tracking
+   ============================================================ */
+/* Analytics below */
+
+function filterProducts() { renderProducts(); }
+
+function setFilter(cat, btn) {
+  currentFilter = cat;
+  if (btn) {
+    document.querySelectorAll('[data-cat]').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll(`[data-cat="${cat}"]`).forEach(b => b.classList.add('active'));
+  }
+  renderProducts();
+}
+
+function setCondFilter(cond, btn) {
+  const isActive = btn && btn.classList.contains('active');
+  document.querySelectorAll('[data-cond]').forEach(b => b.classList.remove('active'));
+  if (isActive) currentCondFilter = '';
+  else { currentCondFilter = cond; if (btn) btn.classList.add('active'); }
+  renderProducts();
+}
+
+/* ============================================================
+   CATEGORY COUNTS
+   ============================================================ */
+function updateCatCounts() {
+  ['phone','laptop','gaming','accessory'].forEach(cat => {
+    const el = document.getElementById(`cat-count-${cat}`);
+    const count = products.filter(p => p.cat === cat).length;
+    if (el) el.textContent = `${count} product${count !== 1 ? 's' : ''}`;
+  });
+}
+
+/* ============================================================
+   CAROUSEL
+   ============================================================ */
+function renderCarousel() {
+  const featured = products.filter(p => p.featured);
+  const track = document.getElementById('carousel-track');
+  const dots = document.getElementById('carousel-dots');
+  if (!track || !featured.length) return;
+
+  track.innerHTML = featured.map(p => `
+    <div class="carousel-slide">
+      <div class="carousel-emoji">${p.emoji}</div>
+      <div class="carousel-info">
+        <div class="carousel-cat">${p.cat}</div>
+        <div class="carousel-name">${p.name}</div>
+        <div class="carousel-specs">${p.specs}</div>
+        <div class="carousel-price">${fmt(p.price)}</div>
+        <div class="carousel-ctas">
+          <a class="btn-primary" href="${waLink(p)}" target="_blank">📲 Buy on WhatsApp</a>
+          <button class="btn-wa" style="padding:12px 18px;font-size:13px;" onclick="addToCart(${p.id})">+ Add to Cart</button>
+        </div>
+      </div>
+    </div>`).join('');
+
+  if (dots) {
+    dots.innerHTML = featured.map((_, i) => `<span class="carousel-dot ${i === 0 ? 'active' : ''}" onclick="goCarousel(${i})"></span>`).join('');
+  }
+}
+
+let carouselTimer = null;
+const CAROUSEL_INTERVAL = 20000; // 20 seconds
+
+function carousel(dir) {
+  const featured = products.filter(p => p.featured);
+  carouselIndex = (carouselIndex + dir + featured.length) % featured.length;
+  goCarousel(carouselIndex);
+  resetCarouselTimer();
+}
+
+function goCarousel(idx) {
+  carouselIndex = idx;
+  const track = document.getElementById('carousel-track');
+  if (track) track.style.transform = `translateX(-${idx * 100}%)`;
+  document.querySelectorAll('.carousel-dot').forEach((d, i) => {
+    d.classList.toggle('active', i === idx);
+  });
+  startProgressBar();
+}
+
+function startProgressBar() {
+  const bar = document.getElementById('carousel-progress-bar');
+  if (!bar) return;
+  bar.style.transition = 'none';
+  bar.style.width = '0%';
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      bar.style.transition = `width ${CAROUSEL_INTERVAL}ms linear`;
+      bar.style.width = '100%';
+    });
+  });
+}
+
+function resetCarouselTimer() {
+  if (carouselTimer) clearInterval(carouselTimer);
+  carouselTimer = setInterval(() => {
+    const featured = products.filter(p => p.featured);
+    carouselIndex = (carouselIndex + 1) % featured.length;
+    goCarousel(carouselIndex);
+  }, CAROUSEL_INTERVAL);
+}
+
+function startCarouselAutoplay() {
+  startProgressBar();
+  resetCarouselTimer();
+}
+
+/* ============================================================
+   TRENDING
+   ============================================================ */
+function renderTrending() {
+  const grid = document.getElementById('trending-grid');
+  if (!grid) return;
+  const sorted = [...products].sort((a, b) => b.price - a.price);
+  const main = sorted[0];
+  const rest = sorted.slice(1, 4);
+
+  grid.innerHTML = `
+    <div class="trending-main">
+      <div class="trending-main-emoji">${main.emoji}</div>
+      <h3>${main.name}</h3>
+      <div class="trending-main-specs">${main.specs}</div>
+      <div class="trending-price">${fmt(main.price)}</div>
+      <a class="btn-primary" href="${waLink(main)}" target="_blank">📲 Order Now</a>
+    </div>
+    <div class="trending-side">
+      ${rest.map((p, i) => `
+        <div class="trending-item" onclick="window.open('${waLink(p)}','_blank')">
+          <div class="trending-item-emoji">${p.emoji}</div>
+          <div style="flex:1;">
+            <div class="trending-item-name">${p.name}</div>
+            <div class="trending-item-price">${fmt(p.price)}</div>
+          </div>
+          <div class="trending-rank">#${i + 2}</div>
+        </div>`).join('')}
+    </div>`;
+}
+
+/* ============================================================
+   COUNTDOWN TIMER
+   ============================================================ */
+(function initCountdown() {
+  const stored = localStorage.getItem('elitetech_deal_end');
+  let endTime;
+  if (stored && parseInt(stored) > Date.now()) {
+    endTime = parseInt(stored);
+  } else {
+    endTime = Date.now() + (8 * 3600000 + 24 * 60000 + 37000);
+    localStorage.setItem('elitetech_deal_end', endTime);
+  }
+
+  function tick() {
+    const diff = Math.max(0, endTime - Date.now());
+    const h = Math.floor(diff / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    const pad = n => String(n).padStart(2, '0');
+    const hEl = document.getElementById('count-h');
+    const mEl = document.getElementById('count-m');
+    const sEl = document.getElementById('count-s');
+    if (hEl) hEl.textContent = pad(h);
+    if (mEl) mEl.textContent = pad(m);
+    if (sEl) sEl.textContent = pad(s);
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+
+/* ============================================================
+   AI ASSISTANT
+   ============================================================ */
+function toggleAI() {
+  const panel = document.getElementById('ai-panel');
+  panel.classList.toggle('open');
+}
+
+function sendAISugg(btn) {
+  document.getElementById('ai-input').value = btn.textContent;
+  document.getElementById('ai-suggestions').style.display = 'none';
+  sendAIMsg();
+}
+
+async function sendAIMsg() {
+  const input = document.getElementById('ai-input');
+  const msg = input.value.trim();
+  if (!msg) return;
+  input.value = '';
+  addAIMsg('user', msg);
+
+  const typingId = addTyping();
+  const inventory = products.map(p =>
+    `- ${p.name} | ₦${p.price.toLocaleString()} | ${p.condition === 'new' ? 'Brand New' : 'UK Used'} | ${p.stock} | ${p.specs}`
+  ).join('\n');
+
+  const systemPrompt = `You are the AI sales assistant for Elite Tech, a premium tech store in Maiduguri, Nigeria. Here's our current inventory:\n\n${inventory}\n\nRULES:\n1. ONLY recommend products from the inventory above.\n2. Be warm and conversational like a knowledgeable salesperson.\n3. Always mention price and condition.\n4. Keep responses to 2-4 sentences.\n5. End with: "WhatsApp us at +234 903 600 6553 to order!"`;
+
+  try {
+    const res = await fetch('https://elitetech-proxy.samuelphilip002.workers.dev/ai', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ model: 'claude-sonnet-4-20250514', max_tokens: 1000, system: systemPrompt, messages: [{ role: 'user', content: msg }] })
+    });
+    const data = await res.json();
+    const reply = data.content?.map(c => c.text || '').join('') || "I couldn't get a response. Please chat us on WhatsApp: +234 903 600 6553";
+    removeTyping(typingId);
+    addAIMsg('ai', reply);
+  } catch (e) {
+    removeTyping(typingId);
+    addAIMsg('ai', "I'm having trouble right now. Reach us on WhatsApp at +234 903 600 6553 — we're happy to help! 📲");
+  }
+}
+
+function addAIMsg(role, text) {
+  const msgs = document.getElementById('ai-messages');
+  const div = document.createElement('div');
+  div.className = `ai-msg ${role}`;
+  div.innerHTML = `<div class="ai-msg-bubble">${text.replace(/\n/g,'<br>')}</div>`;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+  return div;
+}
+
+function addTyping() {
+  const msgs = document.getElementById('ai-messages');
+  const id = 'typing-' + Date.now();
+  const div = document.createElement('div');
+  div.className = 'ai-msg ai'; div.id = id;
+  div.innerHTML = `<div class="ai-msg-bubble"><div class="typing-indicator"><span></span><span></span><span></span></div></div>`;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+  return id;
+}
+
+function removeTyping(id) { const el = document.getElementById(id); if (el) el.remove(); }
+
+
+/* ============================================================
+   PRODUCT DETAIL MODAL
+   ============================================================ */
+let currentModalProduct = null;
+let currentImgIndex = 0;
+
+function openProductModal(id) {
+  const p = products.find(x => x.id === id);
+  if (!p) return;
+  currentModalProduct = p;
+  currentImgIndex = 0;
+
+  const catLabel = { phone:'Smartphone', laptop:'Laptop', gaming:'Gaming', accessory:'Accessory' }[p.cat] || p.cat;
+  const imgs = (p.images && p.images.length > 0) ? p.images : (p.img ? [p.img] : []);
+
+  // Gallery
+  const gallery = document.getElementById('pmodal-gallery');
+  if (imgs.length > 0) {
+    gallery.innerHTML = `
+      <div style="position:relative;">
+        <img id="pmodal-main-img" src="${imgs[0]}" class="pmodal-main-img"
+          onerror="this.parentElement.innerHTML='<div class=\'pmodal-main-placeholder\'><span>${p.emoji}</span><span>${p.name}</span></div>'"
+          alt="${p.name}">
+        ${imgs.length > 1 ? `<div class="pmodal-img-count">1 / ${imgs.length}</div>` : ''}
+      </div>
+      ${imgs.length > 1 ? `<div class="pmodal-thumbs">${imgs.map((url, i) =>
+        `<div class="pmodal-thumb ${i===0?'active':''}" onclick="switchModalImg(${i},'${url}',${imgs.length})">
+          <img src="${url}" alt="img${i}" onerror="this.parentElement.textContent='${p.emoji}'">
+        </div>`).join('')}</div>` : ''}`;
+  } else {
+    gallery.innerHTML = `<div class="pmodal-main-placeholder"><span>${p.emoji}</span><span>${p.name}</span></div>`;
+  }
+
+  // Badges
+  const cond = p.condition === 'new' ? '<span class="badge badge-new">🟢 Brand New</span>' : '<span class="badge badge-used">🟡 UK Used</span>';
+  const stock = p.stock === 'sold' ? '<span class="badge badge-sold">Sold Out</span>' : p.stock === 'limited' ? '<span class="badge badge-hot">⚠️ Limited</span>' : '';
+  document.getElementById('pmodal-badges').innerHTML = cond + stock;
+
+  document.getElementById('pmodal-title').textContent = p.name;
+  document.getElementById('pmodal-name').textContent = p.name;
+  document.getElementById('pmodal-cat').textContent = catLabel;
+  document.getElementById('pmodal-price').textContent = fmt(p.price);
+
+  // Stock row
+  const qty = (p.quantity !== undefined && p.quantity !== null) ? p.quantity : '—';
+  const stockText = p.stock === 'sold' ? '🔴 Sold Out' : p.stock === 'limited' ? '🟡 Limited Stock' : '🟢 In Stock';
+  document.getElementById('pmodal-stock-row').innerHTML =
+    `<span>${stockText}</span> <span class="pmodal-qty-badge">Qty available: ${qty}</span>`;
+
+  document.getElementById('pmodal-specs').textContent = p.specs;
+
+  // Actions
+  const actions = document.getElementById('pmodal-actions');
+  if (p.stock === 'sold') {
+    actions.innerHTML = `<div class="btn-buy-disabled" style="text-align:center;padding:14px;border-radius:50px;">This product is Sold Out</div>`;
+  } else {
+    actions.innerHTML = `
+      <a class="pmodal-btn-buy" href="${waLink(p)}" target="_blank">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.549 4.122 1.51 5.857L.057 23.882l6.207-1.63A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.37l-.36-.213-3.683.967.983-3.596-.234-.371A9.82 9.82 0 012.182 12c0-5.422 4.396-9.818 9.818-9.818 5.422 0 9.818 4.396 9.818 9.818 0 5.422-4.396 9.818-9.818 9.818z"/></svg>
+        📲 Buy on WhatsApp
+      </a>
+      <button class="pmodal-btn-cart" onclick="addToCart(${p.id}); closeProductModal();">+ Add to Cart</button>`;
+  }
+
+  document.getElementById('product-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function switchModalImg(idx, url, total) {
+  currentImgIndex = idx;
+  const mainImg = document.getElementById('pmodal-main-img');
+  if (mainImg) { mainImg.src = url; }
+  const countEl = document.querySelector('.pmodal-img-count');
+  if (countEl) countEl.textContent = `${idx + 1} / ${total}`;
+  document.querySelectorAll('.pmodal-thumb').forEach((t, i) => t.classList.toggle('active', i === idx));
+}
+
+function closeProductModal() {
+  document.getElementById('product-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('product-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeProductModal();
+});
+
+/* ============================================================
+   ADMIN — MULTIPLE IMAGES
+   ============================================================ */
+function addImgRow() {
+  const list = document.getElementById('img-url-list');
+  if (list.children.length >= 5) { showToast('Maximum 5 images per product'); return; }
+  const row = document.createElement('div');
+  row.className = 'img-url-row';
+  row.innerHTML = `<input class="form-input" type="url" placeholder="https://example.com/image.jpg">
+    <button class="btn-remove-img" onclick="removeImgRow(this)">✕</button>`;
+  list.appendChild(row);
+}
+
+function removeImgRow(btn) {
+  const list = document.getElementById('img-url-list');
+  if (list.children.length <= 1) { btn.previousElementSibling.value = ''; return; }
+  btn.parentElement.remove();
+}
+
+/* ============================================================
+   ADMIN — EDIT STOCK & QUANTITY
+   ============================================================ */
+function saveProductEdit(id) {
+  const p = products.find(x => x.id === id);
+  if (!p) return;
+  const stockEl = document.getElementById('edit-stock-' + id);
+  const qtyEl = document.getElementById('edit-qty-' + id);
+  const priceEl = document.getElementById('edit-price-' + id);
+  if (stockEl) p.stock = stockEl.value;
+  if (qtyEl) p.quantity = parseInt(qtyEl.value) || 0;
+  if (priceEl && parseInt(priceEl.value) > 0) p.price = parseInt(priceEl.value);
+  saveProducts(); renderProducts(); renderCarousel();
+  startCarouselAutoplay(); renderTrending(); renderAdminList();
+  showToast('✅ Product updated!');
+  pushToGitHub();
+}
+
+
+/* ── OTP COLOUR PUZZLE ──────────────────────────────────────── */
+function renderOtpPuzzle(otp) {
+  // Each tile: digit, colour, and within-colour position (1 or 2)
+  const tiles = [
+    { digit: otp[0], colour: 'red',   pos: 1 },
+    { digit: otp[1], colour: 'red',   pos: 2 },
+    { digit: otp[2], colour: 'blue',  pos: 1 },
+    { digit: otp[3], colour: 'blue',  pos: 2 },
+    { digit: otp[4], colour: 'green', pos: 1 },
+    { digit: otp[5], colour: 'green', pos: 2 },
+  ];
+  // Fully shuffle all 6 tiles individually
+  for (let i = tiles.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [tiles[i], tiles[j]] = [tiles[j], tiles[i]];
+  }
+  // Ensure within each colour, pos1 always appears before pos2
+  ['red','blue','green'].forEach(col => {
+    const idx = tiles.reduce((a, t, i) => t.colour === col ? [...a, i] : a, []);
+    if (tiles[idx[0]].pos > tiles[idx[1]].pos) {
+      [tiles[idx[0]], tiles[idx[1]]] = [tiles[idx[1]], tiles[idx[0]]];
+    }
+  });
+  const tilesEl = document.getElementById('otp-colour-tiles');
+  tilesEl.innerHTML = tiles.map(t =>
+    '<div class="otp-ctile ' + t.colour + '">' + t.digit + '</div>'
+  ).join('');
+}
+
+/* ============================================================
+   ADMIN AUTH — PASSWORD + OTP
+   ============================================================ */
+// ⚠️ Change these credentials in the source code:
+const ADMIN_PASSWORD = 'elitetech2025';
+let currentOTP = null;
+let otpExpiry = null;
+
+function openAdminAuth() {
+  document.getElementById('admin-auth-modal').classList.add('open');
+  document.getElementById('auth-step-1').classList.add('active');
+  document.getElementById('auth-step-2').classList.remove('active');
+  document.getElementById('auth-pw-error').style.display = 'none';
+  document.getElementById('auth-otp-error').style.display = 'none';
+  document.getElementById('auth-password').value = '';
+  document.getElementById('auth-otp').value = '';
+  setTimeout(() => document.getElementById('auth-password').focus(), 100);
+}
+
+function closeAdminAuth() {
+  document.getElementById('admin-auth-modal').classList.remove('open');
+}
+
+async function checkPassword() {
+  if (SEC.isLocked()) {
+    const errEl = document.getElementById('auth-pw-error');
+    errEl.textContent = '🔒 Locked for ' + SEC.minsLeft() + ' min after too many attempts.';
+    errEl.style.display = 'block'; return;
+  }
+  const pw = document.getElementById('auth-password').value;
+  const errEl = document.getElementById('auth-pw-error');
+  if (pw !== ADMIN_PASSWORD) {
+    SEC.fail();
+    const left = SEC.maxAttempts - SEC.getA().n;
+    errEl.textContent = left<=0 ? '🔒 Account locked 15 min.' : 'Wrong password. '+left+(left===1?' attempt left':' attempts left')+'.';
+    errEl.style.display='block';
+    document.getElementById('auth-password').value=''; return;
+  }
+  SEC.reset(); SEC.startSess(); localStorage.setItem('et_admin_active','1'); logActivity('Admin login successful');
+  errEl.style.display = 'none';
+  // Generate OTP & render puzzle
+  currentOTP = String(Math.floor(100000 + Math.random() * 900000));
+  otpExpiry = Date.now() + 120000; // 2 min
+  renderOtpPuzzle(currentOTP);
+  document.getElementById('auth-step-1').classList.remove('active');
+  document.getElementById('auth-step-2').classList.add('active');
+  setTimeout(() => document.getElementById('auth-otp').focus(), 100);
+}
+
+function checkOTP() {
+  const entered = document.getElementById('auth-otp').value.trim();
+  const errEl = document.getElementById('auth-otp-error');
+
+  if (!currentOTP || Date.now() > otpExpiry) {
+    errEl.textContent = 'OTP expired. Please restart.';
+    errEl.style.display = 'block';
+    return;
+  }
+  if (entered !== currentOTP) {
+    errEl.style.display = 'block';
+    document.getElementById('auth-otp').value = '';
+    return;
+  }
+  // SUCCESS
+  closeAdminAuth();
+  currentOTP = null;
+  openAdminPanel();
+}
+
+function openAdminPanel() {
+  document.getElementById('admin-panel').style.display = 'block';
+  renderAdminList();
+}
+
+function closeAdmin() {
+  localStorage.removeItem('et_admin_active');
+  document.getElementById('admin-panel').style.display = 'none';
+}
+
+// Keyboard shortcut — Ctrl+Shift+A
+document.addEventListener('keydown', e => {
+  if (e.ctrlKey && e.shiftKey && e.key === 'A') { e.preventDefault(); openAdminAuth(); }
+});
+
+// Mobile secret: tap footer logo 5 times within 3 seconds
+let tapCount = 0, tapTimer;
+document.getElementById('footer-logo-tap').addEventListener('click', () => {
+  tapCount++;
+  clearTimeout(tapTimer);
+  tapTimer = setTimeout(() => tapCount = 0, 3000);
+  if (tapCount >= 5) { tapCount = 0; openAdminAuth(); }
+});
+
+/* ============================================================
+   ADMIN PRODUCT MANAGEMENT
+   ============================================================ */
+function renderAdminList() {
+  const list = document.getElementById('admin-products-list');
+  list.innerHTML = `<h3 style="font-family:var(--font-display);font-size:17px;font-weight:800;margin-bottom:14px;padding:0 24px;">All Products (${products.length})</h3>` +
+    products.map(p => `
+      <div class="admin-product-row" style="flex-direction:column;align-items:stretch;">
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div class="admin-product-emoji">${p.emoji}</div>
+          <div class="admin-product-info">
+            <h4>${p.name}</h4>
+            <p>${p.condition === 'new' ? '🟢 New' : '🟡 UK Used'} · ${p.cat}</p>
+          </div>
+          <div class="admin-product-price">${fmt(p.price)}</div>
+          <button class="btn-del" onclick="deleteProduct(${p.id})">Delete</button>
+        </div>
+        <div class="admin-edit-row">
+          <label style="font-size:11px;color:var(--text-muted);">Stock:</label>
+          <select class="admin-mini-select" id="edit-stock-${p.id}">
+            <option value="instock" ${p.stock==='instock'?'selected':''}>In Stock</option>
+            <option value="limited" ${p.stock==='limited'?'selected':''}>Limited</option>
+            <option value="sold" ${p.stock==='sold'?'selected':''}>Sold Out</option>
+          </select>
+          <label style="font-size:11px;color:var(--text-muted);">Qty:</label>
+          <input class="admin-mini-input" id="edit-qty-${p.id}" type="number" min="0" value="${p.quantity||0}" style="width:56px;">
+          <label style="font-size:11px;color:var(--text-muted);">₦ Price:</label>
+          <input class="admin-mini-input" id="edit-price-${p.id}" type="number" min="0" value="${p.price}" style="width:90px;">
+          <button class="btn-save-edit" onclick="saveProductEdit(${p.id})">Save</button>
+        </div>
+      </div>`).join('');
+}
+
+function deleteProduct(id) {
+  if (!confirm('Delete this product?')) return;
+  products = products.filter(p => p.id !== id);
+  saveProducts(); renderProducts(); renderCarousel();
+  startCarouselAutoplay(); renderTrending(); updateCatCounts(); renderAdminList();
+  showToast('Product deleted');
+  pushToGitHub();
+}
+
+async function aiGenerateSpecs() {
+  const name = document.getElementById('p-name').value.trim();
+  if (!name) { showToast('Enter a product name first'); return; }
+  const btn = document.querySelector('.ai-gen-btn');
+  btn.textContent = '⏳ Generating...';
+  btn.disabled = true;
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-api-key': getAiKey(), 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514', max_tokens: 1000,
+        messages: [{ role: 'user', content: `Generate a concise product specs summary for "${name}" in 1 line (max 120 chars), comma-separated key specs only. No intro text, just the specs. Example: "6.7" OLED, A17 Pro, 48MP, 256GB, USB-C"` }]
+      })
+    });
+    const data = await res.json();
+    const specs = data.content?.map(c => c.text || '').join('').trim();
+    if (specs) document.getElementById('p-specs').value = specs;
+  } catch(e) { showToast('AI unavailable, enter specs manually'); }
+  btn.textContent = '✨ Auto-Generate with AI';
+  btn.disabled = false;
+}
+
+function adminAddProduct() {
+  const name = document.getElementById('p-name').value.trim();
+  const price = parseInt(document.getElementById('p-price').value);
+  if (!name || !price) { showToast('Name and price are required'); return; }
+  const catVal = document.getElementById('p-cat').value;
+  const imgRows = document.querySelectorAll('#img-url-list .img-url-row input');
+  const images = Array.from(imgRows).map(i => i.value.trim()).filter(Boolean);
+  const product = {
+    id: Date.now(), name, cat: catVal,
+    emoji: document.getElementById('p-emoji').value || { phone:'📱', laptop:'💻', gaming:'🎮', accessory:'🎧' }[catVal],
+    condition: document.getElementById('p-cond').value, price,
+    stock: document.getElementById('p-stock').value,
+    quantity: parseInt(document.getElementById('p-qty').value) || 1,
+    specs: document.getElementById('p-specs').value || 'High quality device',
+    featured: document.getElementById('p-featured').value === 'yes',
+    img: images[0] || '',
+    images: images,
+  };
+  products.unshift(product);
+  saveProducts(); renderProducts(); renderCarousel();
+  startCarouselAutoplay(); renderTrending(); updateCatCounts(); renderAdminList();
+  ['p-name','p-price','p-specs','p-emoji','p-qty'].forEach(id => document.getElementById(id).value = '');
+  document.querySelectorAll('#img-url-list .img-url-row input').forEach(i => i.value = '');
+  const list = document.getElementById('img-url-list');
+  while (list.children.length > 1) list.lastChild.remove();
+  showToast('✅ Product added!');
+  pushToGitHub();
+}
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.style.display = 'block';
+  clearTimeout(toast._timer);
+  toast._timer = setTimeout(() => { toast.style.display = 'none'; }, 3000);
+}
+
+/* ============================================================
+   NAV + UI
+   ============================================================ */
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+function toggleMenu() {
+  const menu = document.getElementById('mobile-menu');
+  const ham = document.getElementById('hamburger');
+  menu.classList.toggle('open');
+  ham.classList.toggle('open');
+}
+
+function focusSearch() {
+  document.getElementById('search-input').focus();
+  document.getElementById('search-bar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Close modals on backdrop click
+document.getElementById('cart-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeCart();
+});
+document.getElementById('admin-auth-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeAdminAuth();
+});
+
+/* ============================================================
+   INIT
+   ============================================================ */
+
+
+
+/* ============================================================
+   GITHUB JSON DATABASE
+   ============================================================ */
+const GH_USER  = 'samusts';
+const GH_REPO  = 'PKSamustsEliteTech';
+const GH_FILE  = 'db.json';
+const GH_RAW   = 'https://raw.githubusercontent.com/samusts/PKSamustsEliteTech/main/db.json';
+const GH_API   = 'https://api.github.com/repos/samusts/PKSamustsEliteTech/contents/db.json';
+
+function getGhToken() {
+  if (typeof ELITETECH_CONFIG !== 'undefined' && ELITETECH_CONFIG.githubToken) {
+    return ELITETECH_CONFIG.githubToken;
+  }
+  return localStorage.getItem('elitetech_gh_token') || '';
+}
+
+function saveGhToken() {
+  const t = document.getElementById('gh-token-input').value.trim();
+  if (!t) { showToast('Please enter a token'); return; }
+  localStorage.setItem('elitetech_gh_token', t);
+  document.getElementById('gh-token-input').value = '';
+  showToast('✅ GitHub token saved!');
+  setGhStatus('yellow', 'Testing connection...');
+  syncFromGitHub();
+}
+
+function saveAiKey() {
+  const k = document.getElementById('ai-key-input').value.trim();
+  if (!k) { showToast('Please enter an API key'); return; }
+  localStorage.setItem('elitetech_ai_key', k);
+  document.getElementById('ai-key-input').value = '';
+  showToast('✅ AI key saved!');
+}
+
+function getAiKey() {
+  if (typeof ELITETECH_CONFIG !== 'undefined' && ELITETECH_CONFIG.anthropicKey) {
+    return ELITETECH_CONFIG.anthropicKey;
+  }
+  return localStorage.getItem('elitetech_ai_key') || '';
+}
+
+function setGhStatus(color, text) {
+  const dot = document.getElementById('gh-dot');
+  const txt = document.getElementById('gh-status-text');
+  if (dot) { dot.className = 'gh-dot ' + color; }
+  if (txt) { txt.textContent = text; }
+}
+
+async function syncFromGitHub() {
+  setGhStatus('yellow', 'Syncing...');
+  try {
+    const res = await fetch('https://elitetech-proxy.samuelphilip002.workers.dev/db?t=' + Date.now());
+    if (!res.ok) throw new Error('Fetch failed');
+    const raw = await res.json();
+    const db = raw.content
+      ? JSON.parse(decodeURIComponent(escape(atob(raw.content.replace(/\n/g,'')))))
+      : raw;
+    if (db.products && db.products.length > 0) {
+      products = db.products;
+      saveProducts();
+    }
+    if (db.reviews) {
+      localStorage.setItem('elitetech_reviews', JSON.stringify(db.reviews));
+    }
+    if (db.aiKey) { localStorage.setItem('elitetech_ai_key', db.aiKey); }
+    if (db.services) { localStorage.setItem('et_services',JSON.stringify(db.services)); customServices=db.services; renderServiceCards(); }
+    if (db.categories) { localStorage.setItem('et_cats',JSON.stringify(db.categories)); customCategories=db.categories; }
+    if (db.settings) { localStorage.setItem('et_settings',JSON.stringify(db.settings)); storeSettings=db.settings; }
+    if (db.flash) { localStorage.setItem('et_flash',JSON.stringify(db.flash)); renderFlashBanner(); }
+    if (db.notifs) { localStorage.setItem('et_notifs',JSON.stringify(db.notifs)); updateNotifBadge(); }
+    localStorage.setItem('et_last_sync', String(Date.now()));
+    updateLastSyncTime();
+    renderProducts(); renderCarousel(); renderTrending(); updateCatCounts();
+    renderTestiPage(0, false); loadReviews();
+    setGhStatus('green', '✅ Synced — ' + new Date().toLocaleTimeString());
+    localStorage.setItem('et_last_sync', String(Date.now()));
+    updateLastSyncTime();
+    if (document.getElementById('admin-list')) renderAdminList();
+  } catch(e) {
+    setGhStatus('red', 'Sync failed — check connection');
+    console.error(e);
+  }
+}
+
+async function pushToGitHub() {
+  setGhStatus('yellow', 'Saving to cloud...');
+  try {
+    // Get current SHA
+    const metaRes = await fetch('https://elitetech-proxy.samuelphilip002.workers.dev/db', {
+      headers: { Accept: 'application/vnd.github.v3+json' }
+    });
+    let sha = null;
+    if (metaRes.ok) {
+      const meta = await metaRes.json();
+      sha = meta.sha;
+    }
+
+    const reviews = JSON.parse(localStorage.getItem('elitetech_reviews')||'[]');
+    const aiKey = localStorage.getItem('elitetech_ai_key')||'';
+    const svcs = JSON.parse(localStorage.getItem('et_services')||'[]');
+    const cats = JSON.parse(localStorage.getItem('et_cats')||'[]');
+    const settings = JSON.parse(localStorage.getItem('et_settings')||'{}');
+    const flash = JSON.parse(localStorage.getItem('et_flash')||'null');
+    const notifs = JSON.parse(localStorage.getItem('et_notifs')||'[]');
+    const db = {products, reviews, aiKey, services:svcs, categories:cats, settings, flash, notifs, lastUpdated:Date.now()};
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(db, null, 2))));
+
+    const body = { message: 'Update db.json', content };
+    if (sha) body.sha = sha;
+
+    const putRes = await fetch('https://elitetech-proxy.samuelphilip002.workers.dev/db', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+
+    if (!putRes.ok) throw new Error('Push failed');
+    setGhStatus('green', 'Saved to cloud — ' + new Date().toLocaleTimeString());
+    showToast('☁️ Saved to GitHub!');
+  } catch(e) {
+    setGhStatus('red', 'Save failed — ' + e.message);
+    showToast('⚠️ Cloud save failed — saved locally only');
+    console.error(e);
+  }
+}
+
+
+
+/* ============================================================
+   FEEDBACK / REVIEWS
+   ============================================================ */
+let selectedStars = 5;
+let testiPage = 0;
+let testiTimer = null;
+const MAX_REVIEWS = 20;
+
+const DEFAULT_REVIEWS = [
+  { name: 'Ahmad Bello', location: 'Maiduguri, Borno', stars: 5,
+    text: 'Got my iPhone 15 Pro Max delivered same day. The phone is 100% original with proper warranty. Elite Tech is the real deal in Maiduguri!' },
+  { name: 'Fatima Usman', location: 'Abuja, FCT', stars: 5,
+    text: 'Ordered a UK-used MacBook Pro and I can\'t believe the quality. Looks brand new, works perfectly. Price was very fair. Highly recommended!' },
+  { name: 'Musa Ibrahim', location: 'Kano, Nigeria', stars: 5,
+    text: 'The PS5 I bought for my son is genuine. Fast delivery, good packaging, and the customer service on WhatsApp was excellent. Will definitely order again!' },
+];
+
+function setStars(n) {
+  selectedStars = n;
+  document.querySelectorAll('#star-row .star-btn').forEach((btn, i) => {
+    btn.classList.toggle('selected', i < n);
+  });
+}
+
+function getAllReviews() {
+  const saved = JSON.parse(localStorage.getItem('elitetech_reviews') || '[]');
+  // Newest customer reviews first, then defaults
+  return [...saved, ...DEFAULT_REVIEWS];
+}
+
+function renderTestiPage(page, animate) {
+  const all = getAllReviews();
+  const totalPages = Math.ceil(all.length / 3);
+  const slice = all.slice(page * 3, page * 3 + 3);
+  const grid = document.getElementById('testi-grid');
+  if (!grid) return;
+
+  function doRender() {
+    grid.innerHTML = slice.map(r => `
+      <div class="testi-card fade-in">
+        <div class="testi-stars">${'★'.repeat(r.stars)}${'☆'.repeat(5 - r.stars)}</div>
+        <p class="testi-text">"${r.text}"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👤</div>
+          <div>
+            <div class="testi-name">${r.name}</div>
+            <div class="testi-location">${r.location || r.date || ''}</div>
+          </div>
+        </div>
+      </div>`).join('');
+
+    // Dots
+    const dots = document.getElementById('testi-dots');
+    if (dots) {
+      dots.innerHTML = Array.from({length: totalPages}, (_, i) =>
+        `<div class="testi-dot ${i === page ? 'active' : ''}"></div>`).join('');
+    }
+  }
+
+  if (animate && grid.children.length > 0) {
+    grid.querySelectorAll('.testi-card').forEach(c => c.classList.add('fade-out'));
+    setTimeout(doRender, 450);
+  } else {
+    doRender();
+  }
+}
+
+function startTestiAutoplay() {
+  if (testiTimer) clearInterval(testiTimer);
+  testiTimer = setInterval(() => {
+    const all = getAllReviews();
+    const totalPages = Math.ceil(all.length / 3);
+    testiPage = (testiPage + 1) % totalPages;
+    renderTestiPage(testiPage, true);
+  }, 6000);
+}
+
+async function submitReview() {
+  const name = document.getElementById('review-name').value.trim();
+  const text = document.getElementById('review-text').value.trim();
+  if (!name) { showToast('Please enter your name'); return; }
+  if (!text)  { showToast('Please write your review'); return; }
+
+  const btn = document.querySelector('.feedback-submit-btn');
+  btn.textContent = '🔍 Checking review...';
+  btn.disabled = true;
+
+  // Moderate with AI — reject reviews that don't promote EliteTech
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-api-key': getAiKey(), 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 50,
+        system: 'You are a review moderator for EliteTech, a tech store in Maiduguri, Nigeria. Reply with only "APPROVE" if the review is positive, genuine, or neutral about the store/products. Reply with only "REJECT" if the review is negative, offensive, spam, unrelated, or harms the store reputation. One word only.',
+        messages: [{ role: 'user', content: `Review by ${name}: "${text}"` }]
+      })
+    });
+    const data = await res.json();
+    const verdict = data.content?.[0]?.text?.trim().toUpperCase();
+    if (verdict !== 'APPROVE') {
+      showToast('⚠️ Review could not be posted.');
+      btn.textContent = '⭐ Submit Review';
+      btn.disabled = false;
+      return;
+    }
+  } catch(e) {
+    // If AI check fails, allow through
+  }
+
+  const reviews = JSON.parse(localStorage.getItem('elitetech_reviews') || '[]');
+  reviews.unshift({
+    name, text, stars: selectedStars,
+    location: '',
+    date: new Date().toLocaleDateString('en-NG', { day:'numeric', month:'short', year:'numeric' })
+  });
+  // Keep only latest MAX_REVIEWS
+  if (reviews.length > MAX_REVIEWS) reviews.splice(MAX_REVIEWS);
+  localStorage.setItem('elitetech_reviews', JSON.stringify(reviews));
+
+  document.getElementById('review-name').value = '';
+  document.getElementById('review-text').value = '';
+  setStars(5);
+  btn.textContent = '⭐ Submit Review';
+  btn.disabled = false;
+
+  const succ = document.getElementById('feedback-success');
+  succ.style.display = 'block';
+  setTimeout(() => succ.style.display = 'none', 3000);
+
+  pushToGitHub();
+  // Jump to page 0 to show new review immediately
+  testiPage = 0;
+  renderTestiPage(0, true);
+  startTestiAutoplay();
+  showToast('✅ Review posted!');
+
+  // Update list below form
+  loadReviews();
+}
+
+function loadReviews() {
+  const list = document.getElementById('customer-reviews-list');
+  if (!list) return;
+  const reviews = JSON.parse(localStorage.getItem('elitetech_reviews') || '[]');
+  if (!reviews.length) { list.innerHTML = ''; return; }
+  list.innerHTML = reviews.map(r => `
+    <div class="customer-review-item">
+      <div class="customer-review-stars">${'⭐'.repeat(r.stars)}</div>
+      <div class="customer-review-text">"${r.text}"</div>
+      <div class="customer-review-meta">${r.name} · ${r.date}</div>
+    </div>`).join('');
+}
+
+// Init
+
+
+
+/* ============================================================
+   PWA — Install prompt & Service Worker
+   ============================================================ */
+let deferredInstallPrompt = null;
+
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  // Show install banner after 30s
+  setTimeout(showInstallBanner, 30000);
+});
+
+function showInstallBanner() {
+  if (!deferredInstallPrompt) return;
+  const banner = document.createElement('div');
+  banner.id = 'install-banner';
+  banner.style.cssText = 'position:fixed;bottom:80px;left:16px;right:16px;z-index:3000;background:var(--surface);border:1px solid var(--gold);border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px;box-shadow:0 8px 32px rgba(0,0,0,0.3);';
+  banner.innerHTML = `
+    <span style="font-size:28px;">⚡</span>
+    <div style="flex:1;">
+      <div style="font-weight:700;font-size:13px;">Install EliteTech App</div>
+      <div style="font-size:11px;color:var(--text-muted);">Fast access, works offline</div>
+    </div>
+    <button onclick="installPWA()" style="background:var(--gold);color:#0a0a0a;border:none;border-radius:20px;padding:7px 14px;font-weight:700;font-size:12px;cursor:pointer;">Install</button>
+    <button onclick="this.parentElement.remove()" style="background:none;border:none;color:var(--text-muted);font-size:18px;cursor:pointer;">✕</button>`;
+  document.body.appendChild(banner);
+}
+
+async function installPWA() {
+  if (!deferredInstallPrompt) return;
+  deferredInstallPrompt.prompt();
+  const result = await deferredInstallPrompt.userChoice;
+  deferredInstallPrompt = null;
+  document.getElementById('install-banner')?.remove();
+  if (result.outcome === 'accepted') showToast('✅ EliteTech installed!');
+}
+
+// Register service worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/PKSamustsEliteTech/sw.js')
+      .then(reg => console.log('SW registered'))
+      .catch(err => console.log('SW failed:', err));
+  });
+}
+
+/* ============================================================
+   NOTIFICATION SYSTEM
+   ============================================================ */
+let notifications = JSON.parse(localStorage.getItem('et_notifs') || '[]');
+
+function addNotif(title, body, icon = '🔔', url = null) {
+  const n = { id: Date.now(), title, body, icon, url, read: false, time: Date.now() };
+  notifications.unshift(n);
+  notifications = notifications.slice(0, 20);
+  localStorage.setItem('et_notifs', JSON.stringify(notifications));
+  renderNotifs();
+  updateNotifBadge();
+}
+
+function renderNotifs() {
+  const list = document.getElementById('notif-list');
+  if (!list) return;
+  if (!notifications.length) {
+    list.innerHTML = '<div style="padding:16px;text-align:center;color:var(--text-muted);font-size:13px;">No notifications yet</div>';
+    return;
+  }
+  list.innerHTML = notifications.map(n => `
+    <div onclick="markNotifRead(${n.id})" style="padding:10px 12px;border-radius:10px;margin-bottom:4px;cursor:pointer;background:${n.read ? 'transparent' : 'var(--surface2)'};border:1px solid ${n.read ? 'transparent' : 'var(--border)'};">
+      <div style="display:flex;gap:8px;align-items:flex-start;">
+        <span style="font-size:20px;">${n.icon}</span>
+        <div style="flex:1;">
+          <div style="font-size:12px;font-weight:700;margin-bottom:2px;">${n.title}</div>
+          <div style="font-size:11px;color:var(--text-muted);">${n.body}</div>
+          <div style="font-size:10px;color:var(--text-dim);margin-top:3px;">${timeAgo(n.time)}</div>
+        </div>
+        ${!n.read ? '<div style="width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:3px;"></div>' : ''}
+      </div>
+    </div>`).join('');
+}
+
+function markNotifRead(id) {
+  notifications = notifications.map(n => n.id === id ? {...n, read: true} : n);
+  localStorage.setItem('et_notifs', JSON.stringify(notifications));
+  renderNotifs();
+  updateNotifBadge();
+}
+
+function clearNotifs() {
+  notifications = [];
+  localStorage.setItem('et_notifs', '[]');
+  renderNotifs();
+  updateNotifBadge();
+}
+
+function updateNotifBadge() {
+  const unread = notifications.filter(n => !n.read).length;
+  const badge = document.getElementById('notif-badge');
+  if (!badge) return;
+  badge.style.display = unread > 0 ? 'flex' : 'none';
+  badge.textContent = unread > 9 ? '9+' : unread;
+}
+
+function toggleNotifPanel() {
+  const panel = document.getElementById('notif-panel');
+  if (!panel) return;
+  panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+  if (panel.style.display === 'block') renderNotifs();
+}
+
+function timeAgo(ts) {
+  const diff = Date.now() - ts;
+  if (diff < 60000) return 'just now';
+  if (diff < 3600000) return Math.floor(diff/60000) + 'm ago';
+  if (diff < 86400000) return Math.floor(diff/3600000) + 'h ago';
+  return Math.floor(diff/86400000) + 'd ago';
+}
+
+// Close notif panel on outside click
+document.addEventListener('click', e => {
+  const panel = document.getElementById('notif-panel');
+  if (panel && !panel.contains(e.target) && !e.target.classList.contains('notif-bell')) {
+    panel.style.display = 'none';
+  }
+});
+
+/* Analytics Panel */
+function renderAnalyticsPanel() {
+  const top = Analytics.topProducts(5);
+  const searches = Analytics.topSearches(5);
+  const topProductsHtml = top.length
+    ? top.map(([id, views]) => {
+        const p = products.find(x => x.id == id);
+        return `<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:12px;">
+          <span>${p ? p.name : 'Unknown'}</span>
+          <span style="color:var(--gold);font-weight:700;">${views} views</span>
+        </div>`;
+      }).join('')
+    : '<div style="font-size:12px;color:var(--text-muted);">No data yet</div>';
+
+  const searchHtml = searches.length
+    ? searches.map(([q, c]) =>
+        `<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:12px;">
+          <span>"${q}"</span><span style="color:var(--gold);font-weight:700;">${c}x</span>
+        </div>`).join('')
+    : '<div style="font-size:12px;color:var(--text-muted);">No searches yet</div>';
+
+  return `
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+      <div style="background:var(--surface2);border-radius:12px;padding:16px;text-align:center;">
+        <div style="font-size:28px;font-weight:800;color:var(--gold);">${products.filter(p=>p.stock==='instock').length}</div>
+        <div style="font-size:11px;color:var(--text-muted);">Active Products</div>
+      </div>
+      <div style="background:var(--surface2);border-radius:12px;padding:16px;text-align:center;">
+        <div style="font-size:28px;font-weight:800;color:var(--gold);">${Analytics.data.sessions}</div>
+        <div style="font-size:11px;color:var(--text-muted);">Sessions</div>
+      </div>
+    </div>
+    <div style="margin-bottom:16px;">
+      <div style="font-size:12px;font-weight:700;margin-bottom:8px;">🔥 Most Viewed Products</div>
+      ${topProductsHtml}
+    </div>
+    <div>
+      <div style="font-size:12px;font-weight:700;margin-bottom:8px;">🔍 Top Searches</div>
+      ${searchHtml}
+    </div>`;
+}
+
+
+/* ============================================================
+   SECURITY SYSTEM
+   ============================================================ */
+const SEC = {
+  maxAttempts: 5, lockoutMs: 15*60*1000, sessionMs: 30*60*1000,
+  getA() { return JSON.parse(localStorage.getItem('et_sec_a')||'{"n":0,"t":0}'); },
+  setA(d) { localStorage.setItem('et_sec_a', JSON.stringify(d)); },
+  isLocked() {
+    const a=this.getA();
+    if (a.n>=this.maxAttempts && Date.now()-a.t<this.lockoutMs) return true;
+    if (Date.now()-a.t>=this.lockoutMs) { this.setA({n:0,t:0}); return false; }
+    return false;
+  },
+  fail() { const a=this.getA(); this.setA({n:a.n+1,t:Date.now()}); },
+  reset() { this.setA({n:0,t:0}); },
+  minsLeft() { const a=this.getA(); return Math.ceil((this.lockoutMs-(Date.now()-a.t))/60000); },
+  startSess() { localStorage.setItem('et_sess',String(Date.now())); },
+  validSess() { const s=localStorage.getItem('et_sess'); return !!(s && Date.now()-parseInt(s)<this.sessionMs); },
+  endSess() { localStorage.removeItem('et_sess'); }
+};
+
+function sanitize(s) {
+  if (typeof s!=='string') return '';
+  return s.replace(/[<>&"'`]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&#x27;','`':'&#x60;'}[c]));
+}
+
+// Session timeout monitor
+setInterval(() => {
+  const p = document.getElementById('admin-panel');
+  const wasLoggedIn=localStorage.getItem('et_admin_active')==='1';
+  if (p && wasLoggedIn && p.style.display!=='none' && !SEC.validSess()) {
+    p.style.display='none'; document.body.style.overflow='';
+    showToast('⏰ Session expired. Please login again.');
+    logActivity('Auto-logout: session expired');
+  }
+  // Update session status
+  const el = document.getElementById('admin-session-status');
+  if (el && SEC.validSess()) {
+    const mins = Math.ceil((SEC.sessionMs-(Date.now()-parseInt(localStorage.getItem('et_sess')||'0')))/60000);
+    el.textContent = `Session: ${mins}m remaining`;
+  }
+}, 30000);
+
+/* ============================================================
+   ACTIVITY LOG
+   ============================================================ */
+function logActivity(action) {
+  const logs = JSON.parse(localStorage.getItem('et_act_log')||'[]');
+  logs.unshift({action:sanitize(action), time:Date.now()});
+  localStorage.setItem('et_act_log', JSON.stringify(logs.slice(0,100)));
+}
+
+function renderActivityLog() {
+  const el = document.getElementById('activity-content');
+  if (!el) return;
+  const logs = JSON.parse(localStorage.getItem('et_act_log')||'[]');
+  if (!logs.length) { el.innerHTML='<div style="padding:24px;text-align:center;color:var(--text-muted);">No activity recorded yet</div>'; return; }
+  el.innerHTML = '<div style="padding:0 4px;">' + logs.map(l=>`
+    <div style="display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);font-size:11.5px;align-items:flex-start;">
+      <span style="color:var(--text-dim);white-space:nowrap;flex-shrink:0;">${new Date(l.time).toLocaleString()}</span>
+      <span style="color:var(--text);">${l.action}</span>
+    </div>`).join('') + '</div>';
+}
+
+/* ============================================================
+   FLASH SALE SYSTEM
+   ============================================================ */
+function getFlashSale() { return JSON.parse(localStorage.getItem('et_flash')||'null'); }
+
+function renderFlashBanner() {
+  document.getElementById('flash-banner')?.remove();
+  const s = getFlashSale();
+  if (!s?.active || Date.now()>s.endTime) return;
+  const mins = Math.max(0, Math.ceil((s.endTime-Date.now())/60000));
+  const b = document.createElement('div');
+  b.id='flash-banner';
+  b.style.cssText='background:linear-gradient(90deg,#e53e3e,#c53030);color:#fff;text-align:center;padding:8px 16px;font-size:12px;font-weight:700;letter-spacing:0.3px;position:fixed;width:100%;z-index:996;';
+  b.innerHTML=`⚡ FLASH SALE — ${sanitize(s.label)}: ${s.discount}% OFF! ⏱ ${mins} mins left <button onclick="this.parentElement.remove()" style="background:none;border:none;color:rgba(255,255,255,0.8);margin-left:8px;cursor:pointer;font-size:14px;">✕</button>`;
+  // Insert after marquee
+  const marquee = document.querySelector('.marquee-strip');
+  if (marquee) marquee.after(b);
+}
+
+function startFlashSale() {
+  const label = document.getElementById('set-flash-label')?.value.trim()||'Flash Sale';
+  const disc = parseInt(document.getElementById('set-flash-disc')?.value)||20;
+  const dur = parseInt(document.getElementById('set-flash-dur')?.value)||120;
+  const sale = {active:true, label, discount:disc, endTime:Date.now()+dur*60000};
+  localStorage.setItem('et_flash', JSON.stringify(sale));
+  renderFlashBanner();
+  addNotif('⚡ Flash Sale LIVE!', `${label} — ${disc}% OFF for ${dur} minutes!`, '🔥');
+  logActivity(`Started flash sale: ${label} ${disc}% off`);
+  showToast('⚡ Flash Sale is LIVE!');
+  pushToGitHub();
+}
+
+function endFlashSale() {
+  localStorage.removeItem('et_flash');
+  document.getElementById('flash-banner')?.remove();
+  logActivity('Flash sale ended');
+  showToast('Flash sale ended');
+  pushToGitHub();
+}
+
+setInterval(renderFlashBanner, 60000);
+
+/* ============================================================
+   DYNAMIC SERVICES MANAGEMENT
+   ============================================================ */
+let customServices = JSON.parse(localStorage.getItem('et_services')||'[]');
+
+function adminAddService() {
+  const name = document.getElementById('svc-name')?.value.trim();
+  if (!name) { showToast('Please enter a service name'); return; }
+  const svc = {
+    id: Date.now(),
+    name: sanitize(name),
+    desc: sanitize(document.getElementById('svc-desc')?.value.trim()||''),
+    price: sanitize(document.getElementById('svc-price')?.value.trim()||''),
+    duration: sanitize(document.getElementById('svc-duration')?.value.trim()||''),
+    icon: document.getElementById('svc-icon')?.value.trim()||'🔧',
+    wa: sanitize(document.getElementById('svc-wa')?.value.trim()||`Hi EliteTech, I need ${name}`),
+    status: document.getElementById('svc-status')?.value||'active',
+    createdAt: Date.now()
+  };
+  customServices.unshift(svc);
+  localStorage.setItem('et_services', JSON.stringify(customServices));
+  renderServicesAdmin();
+  renderServiceCards();
+  logActivity(`Added service: ${name}`);
+  showToast('✅ Service added!');
+  ['svc-name','svc-desc','svc-price','svc-duration','svc-icon','svc-wa'].forEach(id=>{
+    const el=document.getElementById(id); if(el) el.value='';
+  });
+  pushToGitHub();
+}
+
+function toggleServiceStatus(id) {
+  const s = customServices.find(x=>x.id===id);
+  if (!s) return;
+  s.status = s.status==='active' ? 'hidden' : 'active';
+  localStorage.setItem('et_services',JSON.stringify(customServices));
+  renderServicesAdmin(); renderServiceCards();
+  logActivity(`Service "${s.name}" → ${s.status}`);
+  pushToGitHub();
+}
+
+function deleteService(id) {
+  const s = customServices.find(x=>x.id===id);
+  customServices = customServices.filter(x=>x.id!==id);
+  localStorage.setItem('et_services',JSON.stringify(customServices));
+  renderServicesAdmin(); renderServiceCards();
+  logActivity(`Deleted service: ${s?.name||id}`);
+  showToast('Service deleted');
+  pushToGitHub();
+}
+
+function renderServicesAdmin() {
+  const el = document.getElementById('services-admin-list');
+  if (!el) return;
+  if (!customServices.length) {
+    el.innerHTML='<div style="padding:16px;text-align:center;color:var(--text-muted);font-size:12px;">No custom services yet. Built-in services always show.</div>';
+    return;
+  }
+  el.innerHTML = customServices.map(s=>`
+    <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:var(--surface2);border-top:1px solid var(--border);">
+      <span style="font-size:22px;">${s.icon}</span>
+      <div style="flex:1;">
+        <div style="font-size:13px;font-weight:700;">${s.name}</div>
+        <div style="font-size:11px;color:var(--text-muted);">${s.price||'No price'} · ${s.duration||''} · <span style="color:${s.status==='active'?'#38a169':'#e53e3e'}">${s.status}</span></div>
+      </div>
+      <button onclick="toggleServiceStatus(${s.id})" style="background:none;border:1px solid var(--border);border-radius:6px;padding:4px 8px;color:var(--text-muted);font-size:10px;cursor:pointer;">${s.status==='active'?'Hide':'Show'}</button>
+      <button class="btn-del" onclick="deleteService(${s.id})">Del</button>
+    </div>`).join('');
+}
+
+function renderServiceCards() {
+  const grid = document.getElementById('services-grid');
+  if (!grid) return;
+  grid.querySelectorAll('.custom-svc-card').forEach(el=>el.remove());
+  customServices.filter(s=>s.status==='active').forEach(s=>{
+    const card = document.createElement('div');
+    card.className='service-card custom-svc-card';
+    card.innerHTML=`
+      <div class="service-icon">${s.icon}</div>
+      <div class="service-name">${s.name}</div>
+      <div class="service-desc">${s.desc}</div>
+      ${s.duration?`<div class="service-meta">⏱ ${s.duration} &nbsp;|&nbsp; 📍 Maiduguri</div>`:''}
+      <a class="service-wa-btn" href="https://wa.me/${WA}?text=${encodeURIComponent(s.wa)}" target="_blank">📲 Book Now</a>`;
+    grid.appendChild(card);
+  });
+}
+
+/* ============================================================
+   DYNAMIC CATEGORY MANAGEMENT
+   ============================================================ */
+let customCategories = JSON.parse(localStorage.getItem('et_cats')||'[]');
+
+const BUILT_IN_CATS = [
+  {id:'phone',name:'Smartphones',icon:'📱'},{id:'laptop',name:'Laptops',icon:'💻'},
+  {id:'gaming',name:'Gaming',icon:'🎮'},{id:'tablet',name:'Tablets',icon:'📟'},
+  {id:'watch',name:'Smartwatches',icon:'⌚'},{id:'audio',name:'Audio',icon:'🎧'},
+  {id:'accessory',name:'Accessories',icon:'🔌'},{id:'pc',name:'PC & Parts',icon:'🖥️'},
+  {id:'camera',name:'Cameras',icon:'📷'},{id:'tv',name:'TVs & Displays',icon:'📺'},
+  {id:'smart-home',name:'Smart Home',icon:'🏠'},{id:'network',name:'Networking',icon:'📶'},
+  {id:'power',name:'Power & Charging',icon:'🔋'},{id:'software',name:'Software',icon:'💿'},
+  {id:'digital',name:'Digital Products',icon:'📦'},
+];
+
+function allCats() { return [...BUILT_IN_CATS,...customCategories]; }
+
+function adminAddCategory() {
+  const name = document.getElementById('cat-name')?.value.trim();
+  if (!name) { showToast('Enter category name'); return; }
+  const slug = (document.getElementById('cat-slug')?.value.trim()||name).toLowerCase().replace(/[^a-z0-9]+/g,'-');
+  if (allCats().find(c=>c.id===slug)) { showToast('Category ID already exists'); return; }
+  const cat = {id:slug, name:sanitize(name), icon:document.getElementById('cat-icon')?.value.trim()||'📦', custom:true};
+  customCategories.push(cat);
+  localStorage.setItem('et_cats',JSON.stringify(customCategories));
+  renderCategoriesAdmin(); updateCatCounts();
+  logActivity(`Added category: ${name}`);
+  showToast('✅ Category added!');
+  ['cat-name','cat-icon','cat-slug'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  pushToGitHub();
+}
+
+function deleteCategory(id) {
+  customCategories = customCategories.filter(c=>c.id!==id);
+  localStorage.setItem('et_cats',JSON.stringify(customCategories));
+  renderCategoriesAdmin(); updateCatCounts();
+  logActivity(`Deleted category: ${id}`);
+  showToast('Category deleted'); pushToGitHub();
+}
+
+function renderCategoriesAdmin() {
+  const el = document.getElementById('categories-admin-list');
+  if (!el) return;
+  const all = allCats();
+  const counts = {};
+  products.forEach(p=>{counts[p.cat]=(counts[p.cat]||0)+1;});
+  el.innerHTML = '<div style="padding:0 16px 16px;">' + all.map(c=>`
+    <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--surface2);border:1px solid var(--border);border-radius:10px;margin-bottom:6px;">
+      <span style="font-size:18px;">${c.icon}</span>
+      <div style="flex:1;">
+        <div style="font-size:12px;font-weight:700;">${c.name}</div>
+        <div style="font-size:10px;color:var(--text-muted);">ID: ${c.id} · ${counts[c.id]||0} products</div>
+      </div>
+      ${c.custom?`<button class="btn-del" style="font-size:10px;" onclick="deleteCategory('${c.id}')">Del</button>`:'<span style="font-size:9px;color:var(--text-dim);padding:2px 6px;background:var(--surface);border-radius:4px;">Built-in</span>'}
+    </div>`).join('') + '</div>';
+}
+
+/* ============================================================
+   SETTINGS MANAGEMENT
+   ============================================================ */
+let storeSettings = JSON.parse(localStorage.getItem('et_settings')||'{"storeName":"EliteTech","wa":"2349036006553"}');
+
+function saveSettings() {
+  storeSettings.storeName = document.getElementById('set-name')?.value.trim()||storeSettings.storeName;
+  storeSettings.wa = document.getElementById('set-wa')?.value.trim()||storeSettings.wa;
+  storeSettings.marquee = document.getElementById('set-marquee')?.value.trim()||storeSettings.marquee;
+  localStorage.setItem('et_settings',JSON.stringify(storeSettings));
+  logActivity('Store settings updated');
+  showToast('✅ Settings saved!');
+  pushToGitHub();
+}
+
+function loadSettings() {
+  if(document.getElementById('set-name')) document.getElementById('set-name').value=storeSettings.storeName||'';
+  if(document.getElementById('set-wa')) document.getElementById('set-wa').value=storeSettings.wa||'';
+  if(document.getElementById('set-marquee')) document.getElementById('set-marquee').value=storeSettings.marquee||'';
+}
+
+/* ============================================================
+   ANALYTICS SYSTEM
+   ============================================================ */
+const Analytics = {
+  data: JSON.parse(localStorage.getItem('et_analytics')||'{"views":{},"searches":[],"clicks":{},"sessions":0,"revenue":0}'),
+  save() { localStorage.setItem('et_analytics',JSON.stringify(this.data)); },
+  view(id) { this.data.views[id]=(this.data.views[id]||0)+1; this.save(); },
+  search(q) { if(!q||q.length<2) return; this.data.searches.unshift({q,t:Date.now()}); this.data.searches=this.data.searches.slice(0,100); this.save(); },
+  click(l) { this.data.clicks[l]=(this.data.clicks[l]||0)+1; this.save(); },
+  session() { this.data.sessions=(this.data.sessions||0)+1; this.save(); },
+  topProds(n=5) { return Object.entries(this.data.views).sort((a,b)=>b[1]-a[1]).slice(0,n); },
+  topSearches(n=5) {
+    const f={}; this.data.searches.forEach(s=>f[s.q]=(f[s.q]||0)+1);
+    return Object.entries(f).sort((a,b)=>b[1]-a[1]).slice(0,n);
+  }
+};
+Analytics.session();
+
+function renderAnalyticsPanel() {
+  const topP = Analytics.topProds(5);
+  const topS = Analytics.topSearches(5);
+  const inStock = products.filter(p=>p.stock==='instock').length;
+  const limited = products.filter(p=>p.stock==='limited').length;
+  const soldOut = products.filter(p=>p.stock==='sold').length;
+  return `
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;">
+      <div style="background:var(--surface2);border-radius:10px;padding:14px;text-align:center;">
+        <div style="font-size:22px;font-weight:800;color:var(--gold);">${products.length}</div>
+        <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">Total Products</div>
+      </div>
+      <div style="background:var(--surface2);border-radius:10px;padding:14px;text-align:center;">
+        <div style="font-size:22px;font-weight:800;color:#38a169;">${inStock}</div>
+        <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">In Stock</div>
+      </div>
+      <div style="background:var(--surface2);border-radius:10px;padding:14px;text-align:center;">
+        <div style="font-size:22px;font-weight:800;color:var(--gold);">${Analytics.data.sessions}</div>
+        <div style="font-size:10px;color:var(--text-muted);margin-top:2px;">Sessions</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;">
+      <div style="background:var(--surface2);border-radius:10px;padding:14px;">
+        <div style="font-size:11px;font-weight:700;margin-bottom:8px;">🔥 Top Viewed</div>
+        ${topP.length ? topP.map(([id,v])=>{const p=products.find(x=>String(x.id)===String(id));return `<div style="display:flex;justify-content:space-between;font-size:11px;padding:5px 0;border-bottom:1px solid var(--border);"><span style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${p?p.name:'Unknown'}</span><span style="color:var(--gold);font-weight:700;flex-shrink:0;margin-left:6px;">${v}</span></div>`;}).join('') : '<div style="font-size:11px;color:var(--text-muted);">No data yet</div>'}
+      </div>
+      <div style="background:var(--surface2);border-radius:10px;padding:14px;">
+        <div style="font-size:11px;font-weight:700;margin-bottom:8px;">🔍 Top Searches</div>
+        ${topS.length ? topS.map(([q,c])=>`<div style="display:flex;justify-content:space-between;font-size:11px;padding:5px 0;border-bottom:1px solid var(--border);"><span>"${sanitize(q)}"</span><span style="color:var(--gold);font-weight:700;">${c}x</span></div>`).join('') : '<div style="font-size:11px;color:var(--text-muted);">No searches yet</div>'}
+      </div>
+    </div>
+    <div style="background:var(--surface2);border-radius:10px;padding:14px;">
+      <div style="font-size:11px;font-weight:700;margin-bottom:8px;">📦 Inventory Health</div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <span style="font-size:11px;">✅ In Stock: <b>${inStock}</b></span>
+        <span style="font-size:11px;">⚡ Limited: <b>${limited}</b></span>
+        <span style="font-size:11px;">❌ Sold Out: <b>${soldOut}</b></span>
+        <span style="font-size:11px;">📋 Total: <b>${products.length}</b></span>
+      </div>
+    </div>`;
+}
+
+/* ============================================================
+   ADMIN TAB SWITCHER
+   ============================================================ */
+function switchAdminTab(tab) {
+  document.querySelectorAll('.admin-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.admin-tab-content').forEach(c=>c.style.display='none');
+  const btn = document.querySelector(`.admin-tab[onclick*="'${tab}'"]`);
+  if (btn) btn.classList.add('active');
+  const el = document.getElementById('tab-'+tab);
+  if (el) el.style.display='block';
+  // Load tab content
+  if (tab==='analytics') document.getElementById('analytics-content').innerHTML=renderAnalyticsPanel();
+  else if (tab==='activity') renderActivityLog();
+  else if (tab==='services') renderServicesAdmin();
+  else if (tab==='categories') renderCategoriesAdmin();
+  else if (tab==='settings') loadSettings();
+  else if (tab==='products') renderAdminList();
+  logActivity(`Viewed admin tab: ${tab}`);
+}
+
+/* ============================================================
+   ADMIN SEARCH + BULK ACTIONS
+   ============================================================ */
+function filterAdminList() {
+  const q = (document.getElementById('admin-search-input')?.value||'').toLowerCase();
+  document.querySelectorAll('#admin-products-list .admin-product-row').forEach(row=>{
+    row.style.display = (row.querySelector('h4')?.textContent||'').toLowerCase().includes(q)?'':'none';
+  });
+}
+
+function bulkAction(action) {
+  if (action==='delete') {
+    if (!confirm(`⚠️ Delete ALL ${products.length} products? This cannot be undone.`)) return;
+    products=[]; saveProducts(); renderProducts(); renderAdminList();
+    logActivity('Bulk DELETE all products'); pushToGitHub(); showToast('🗑️ All products deleted'); return;
+  }
+  if (action==='hidden' && !confirm(`Hide all ${products.length} products from storefront?`)) return;
+  products.forEach(p=>p.stock=action);
+  saveProducts(); renderProducts(); renderAdminList();
+  logActivity(`Bulk set all products to: ${action}`); pushToGitHub();
+  showToast(`✅ All products set to ${action}`);
+}
+
+/* ============================================================
+   EXPORT + BACKUP
+   ============================================================ */
+function exportProducts() {
+  const db = {
+    exportedAt: new Date().toISOString(),
+    products,
+    services: customServices,
+    categories: allCats(),
+    settings: storeSettings
+  };
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(db,null,2)],{type:'application/json'}));
+  a.download = `elitetech-export-${Date.now()}.json`;
+  a.click(); URL.revokeObjectURL(a.href);
+  logActivity('Data exported to JSON'); showToast('📥 Export downloaded!');
+}
+
+function backupData() {
+  const backup = {products, services:customServices, settings:storeSettings, ts:Date.now()};
+  const backups = JSON.parse(localStorage.getItem('et_backups')||'[]');
+  backups.unshift(backup);
+  localStorage.setItem('et_backups', JSON.stringify(backups.slice(0,5)));
+  logActivity('Manual backup saved (local)');
+  showToast('💾 Backup saved! (5 max stored locally)');
+}
+
+/* ============================================================
+   INVENTORY WARNINGS
+   ============================================================ */
+function checkInventoryWarnings() {
+  const low = products.filter(p=>p.quantity>0&&p.quantity<=3&&p.stock==='instock');
+  if (low.length) {
+    addNotif('⚠️ Low Stock Alert', low.slice(0,3).map(p=>p.name).join(', ')+(low.length>3?`...+${low.length-3} more`:''), '📦');
+  }
+}
+
+/* ============================================================
+   LAST SYNC TIME DISPLAY
+   ============================================================ */
+function updateLastSyncTime() {
+  const el = document.getElementById('last-sync-time');
+  const el2 = document.getElementById('gh-status-text2');
+  const el3 = document.getElementById('gh-dot2');
+  const t = localStorage.getItem('et_last_sync');
+  if (t && el) {
+    const mins = Math.floor((Date.now()-parseInt(t))/60000);
+    el.textContent = mins<1 ? 'just now' : mins+'m ago';
+  }
+  // Mirror main status to settings tab
+  const mainDot = document.getElementById('gh-dot');
+  const mainStatus = document.getElementById('gh-status-text');
+  if (el2 && mainStatus) el2.textContent = mainStatus.textContent;
+  if (el3 && mainDot) el3.className = mainDot.className;
+}
+setInterval(updateLastSyncTime, 10000);
+
+
+/* ============================================================
+   DEAL POPUP
+   ============================================================ */
+function showDealPopup() {
+  const popup = document.getElementById('deal-popup');
+  if (!popup) return;
+  popup.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeDealPopup() {
+  const popup = document.getElementById('deal-popup');
+  if (!popup) return;
+  popup.style.display = 'none';
+  document.body.style.overflow = '';
+  localStorage.setItem('et_deal_closed', String(Date.now()));
+}
+// Close on backdrop click
+document.addEventListener('click', e => {
+  const popup = document.getElementById('deal-popup');
+  if (popup && e.target === popup) closeDealPopup();
+});
+// Auto-show after 8s if not dismissed in last 24h
+setTimeout(() => {
+  const lastClosed = parseInt(localStorage.getItem('et_deal_closed') || '0');
+  const oneDay = 24 * 60 * 60 * 1000;
+  if (Date.now() - lastClosed > oneDay) showDealPopup();
+}, 8000);
+
+/* ============================================================
+   UNIFIED INIT — EliteTech v4.0
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', function() {
+  // Theme
+  updateThemeBtn(document.documentElement.getAttribute('data-theme'));
+  // Core products & UI
+  renderProducts();
+  renderCarousel();
+  startCarouselAutoplay();
+  renderTrending();
+  updateCatCounts();
+  updateCartUI();
+  // Testimonials + reviews
+  setStars(5);
+  renderTestiPage(0, false);
+  startTestiAutoplay();
+  loadReviews();
+  // Notifications
+  updateNotifBadge();
+  renderNotifs();
+  // Dynamic content
+  renderServiceCards();
+  renderFlashBanner();
+  // Inventory check
+  checkInventoryWarnings();
+  // Admin tab default
+  switchAdminTab('products');
+  // Cloud sync — initial + every 10s
+  syncFromGitHub();
+  setInterval(syncFromGitHub, 10000);
+  // Welcome notification (first visit only)
+  if (!localStorage.getItem('et_welcomed')) {
+    setTimeout(() => {
+      addNotif('👋 Welcome to EliteTech!', 'Browse premium devices & installation services in Maiduguri.', '⚡');
+      localStorage.setItem('et_welcomed', '1');
+    }, 4000);
+  }
+});
+
+</script>
+</body>
+</html>
